@@ -6,22 +6,26 @@
     <title>Nana's Kimchi & Korean Restaurant</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="Picfolder/NanaLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
 <div class="container">
     <header>
+        
         <nav>
             <ul>
-                <div class="box-button"><li><a href="#about">About</a></li></div>
-                <div class="box-button"><li><a href="#menu">Foods & Beverages</a></li></div>
+                <li class="box-button"><a href="#about">About</a></li>
+                <li class="box-button"><a href="#menu">Foods & Drinks</a></li>
             </ul>
         </nav>
-                <a href="#home"><img src="Picfolder/NanaLogo.png" alt="Nana's Kimchi & Korean Restaurant Logo" class="logo"></a>
+
+                <a href="#home" class="logo-container"><img src="Picfolder/NanaLogo.png" alt="Nana's Kimchi & Korean Restaurant Logo" class="logo"></a>
+
         <nav>
             <ul>
-                <div class="box-button"><li><a href="#feedback">Feedback</a></li></div>
-                <div class="box-button"><li><a href="#contact">Contact</a></li></div>
+                <li class="box-button"><a href="#feedback">Feedback</a></li>
+                <li class="box-button"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,39 +33,37 @@
     <main>
         <div class="content-wrapper">
             <section class="carousel">
-            <div class="slide-container">
-                <div class="slide">
-                    <img src="Picfolder/temppic.jpg" alt="Image 1">
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="Picfolder/temppic.jpg" alt="Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="Picfolder/temppic2.jpg" alt="Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="Picfolder/temppic3.jpg" alt="Image 3">
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="Picfolder/temppic2.jpg" alt="Image 2">
-                </div>
-                <div class="slide">
-                    <img src="Picfolder/temppic3.jpg" alt="Image 3">
-                </div>
-            </div>
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
-        </section>
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </section>
 
-            <div class="dots-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-        <section class="info">
-            <div class="info-box"><h1>Nana’s Kimchi & Korean Restaurant</h1>
-            <p>Authentic Korean Kimchi & Samgyupsal!! The best kimchi – taste it to believe it!</p></div>
-            <div class="video-container">
-                <img src="Picfolder/temppic4.jpg" alt="Restaurant Opening" class="video-thumb">
-                <button class="play-button">&#9658;</button>
-            </div>
-        </section>
+            <section class="info">
+                <div class="info-box">
+                    <h1>Nana’s Kimchi & Korean Restaurant</h1>
+                    <p>Authentic Korean Kimchi & Samgyupsal!! The best kimchi – taste it to believe it!</p>
+                </div>
+                <div class="video-container">
+                    <img src="Picfolder/temppic4.jpg" alt="Restaurant Opening" class="video-thumb">
+                    <button class="play-button">&#9658;</button>
+                </div>
+            </section>
         </div>
     </main>
 
+<br><br><br>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -82,7 +84,7 @@
             <p>&copy; 2024 Nana's Kimchi & Korean Restaurant. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </div>
