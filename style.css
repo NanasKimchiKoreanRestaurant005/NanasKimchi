@@ -51,6 +51,14 @@ nav ul {
     padding: 0; 
 }
 
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
 nav ul li {
     display: flex; 
 }
@@ -116,7 +124,6 @@ nav ul li a {
 
 .slide img {
     width: 100%;
-    max-width: 650px;
     height: auto;
     border-radius: 10px;
 }

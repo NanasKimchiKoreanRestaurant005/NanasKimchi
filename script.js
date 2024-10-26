@@ -17,14 +17,18 @@ function updateSlidePosition() {
     slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-$(function () {
-    $(".toggle").on("click", function () {
-        if ($(".menu").hasClass("active")) {
-            $(".menu").removeClass("active");
-            $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-        } else {
-            $(".menu").addClass("active");
-            $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
-        }
-    })
+document.querySelector(".toggle").addEventListener("click", function () {
+    const menu = document.querySelector(".menu");
+    const toggleIcon = document.querySelector(".toggle a i");
+
+    menu.classList.toggle("active");
+
+    // Change icon based on menu state
+    if (menu.classList.contains("active")) {
+        toggleIcon.classList.remove("fa-bars");
+        toggleIcon.classList.add("fa-times");
+    } else {
+        toggleIcon.classList.remove("fa-times");
+        toggleIcon.classList.add("fa-bars");
+    }
 });
