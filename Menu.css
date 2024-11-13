@@ -87,6 +87,7 @@ nav ul li a {
 .box-button {
     background-color: #e0cd61; 
     border-radius: 30px;
+    border: 2px solid #000;
     color: #000;
     padding: 10px 70px;
     margin: 10px;
@@ -133,11 +134,16 @@ border-radius: 50px;
 
 .menu-categories button {
     background-color: #e8e03f;
-    border: none;
+    border: 2px solid #000;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.menu-categories button:hover {
+    transform: scale(1.10);
+    transition: .5s;
 }
 
 .menu-items {
