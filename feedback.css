@@ -113,7 +113,7 @@ nav ul li a {
 }
 
 .feedback-content {
-    background-color: rgba(255, 255, 255, 0.85); /* Transparent box */
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent box */
     padding: 20px;
     border-radius: 10px;
     max-width: 5000px;
@@ -127,7 +127,7 @@ nav ul li a {
 }
 
 .feedback-content p {
-    font-size: 1.3em;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -150,9 +150,10 @@ nav ul li a {
 }
 
 .feedback-content a {
-    color: #3f3f3f; /* Set your desired color */
+    color: #000; /* Set your desired color */
     text-decoration: none; /* Removes underline */
     font-weight: bold;
+    font-size: 20px;
 }
 
 /* Responsive Design */
