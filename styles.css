@@ -1,0 +1,240 @@
+/* General Reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dancing+Script:wght@700&family=Dongle&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #8a2026;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+header .logo img {
+    top: 50px;
+    height: 100px;
+}
+
+header nav {
+    position: relative;
+}
+
+nav ul {
+    background-color: #ffffff85;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    background: #ffc107;
+    color: #8d0000;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: relative;
+    z-index: 1100; /* Ensure it stays above the menu */
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Active State: Hamburger to X */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Top bar becomes diagonal */
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Bottom bar becomes diagonal */
+}
+
+/* Side Menu */
+.side-menu {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 1.7rem;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background: #5a0f13;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 20px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.side-menu ul li a:hover {
+    color: #ffc107;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content {
+    flex: 1 1 50%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.content h1 {
+    font-family:"Bagel Fat One", system-ui;
+    font-size: 3.5rem;
+    margin-top: 30px;
+    margin-bottom: 1px;
+}
+
+.content h2 {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 2.5rem;
+}
+
+.content p {
+    font-family: "Dongle", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Dongle", sans-serif;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.view-foods {
+    background: #ffc107;
+    color: #5a0f13;
+}
+
+.view-foods:hover {
+    background: #e0a806;
+}
+
+.location {
+    background: #5a0f13;
+    color: #ffc107;
+}
+
+.location:hover {
+    background: #3d0c0e;
+}
+
+.image {
+    flex: 1 1 40%;
+    max-width: 500px;
+    text-align: center;
+    shape-outside: circle(50%);
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Side Menu Active */
+.side-menu.active {
+    left: 0;
+}
