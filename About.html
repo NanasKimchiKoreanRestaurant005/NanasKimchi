@@ -3,77 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nana's Kimchi & Korean Restaurant</title>
-    <link rel="stylesheet" href="About.css">
+    <title>Nana's Kimchi & Korean Restaurant</title>
     <link rel="icon" type="image/x-icon" href="Picfolder/NanaLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="About.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="Picfolder/NanaLogo.png" alt="Nana's Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="About.html" class="active">About</a>
+                    <!-- Dropdown for About -->
+                    <ul class="dropdown">
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Cuisine</a>
+                    <!-- Dropdown for Cuisine -->
+                    <ul class="dropdown">
+                        <li><a href="#korean">Korean</a></li>
+                        <li><a href="#fusion">Fusion</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
 
-    <div class="container">
-        <header>
-            
-            <nav>
-                <ul>
-                    <li class="box-button"><a href="About.html">About</a></li>
-                    <li class="box-button"><a href="Nanasbento.html">Cuisine</a></li>
-                </ul>
-            </nav>
-    
-                    <a href="index.html" class="logo-container"><img src="Picfolder/NanaLogo.png" alt="Nana's Kimchi & Korean Restaurant Logo" class="logo"></a>
-    
-            <nav>
-                <ul>
-                    <li class="box-button"><a href="Feedback.html">Feedback</a></li>
-                    <li class="box-button"><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            
-        </header>
-
-        <section class="about-section" id="about">
-            <div class="about-content">
-              <h1>About Nana's Kimchi & Korean Restaurant</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel mi tincidunt est scelerisque iaculis quis nec nulla. Integer ipsum ipsum, fringilla non nulla quis, blandit varius velit. Maecenas dapibus justo lorem...</p>
-            </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         
-            <!-- Cards Section -->
-            <div class="cards">
-              <div class="card">
-                <h2>Family Recipes</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel mi tincidunt est scelerisque iaculis quis nec nulla.</p>
-              </div>
-              <div class="card">
-                <h2>Fresh Ingredients</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel mi tincidunt est scelerisque iaculis quis nec nulla.</p>
-              </div>
-              <div class="card">
-                <h2>Warm Hospitality</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel mi tincidunt est scelerisque iaculis quis nec nulla.</p>
-              </div>
-            </div>
-          </section>
-
-              <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="Picfolder/NanaLogo.png" alt="Nana's Kimchi & Korean Restaurant Logo" class="logo-footer">
-            </div>
-            <div class="legal-links">
-                <a href="#">Privacy Notice</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Do Not Share My Personal Information</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/nanaskimchi"><img src="Picfolder/facebook.png" alt="Facebook"></a>
-                <a href="https://www.messenger.com/t/100070880005985"><img src="Picfolder/messenger.png" alt="Messenger"></a>
-                <a href="https://www.instagram.com/explore/locations/111066657305385/nanas-kimchi-korean-restaurant/?fbclid"><img src="Picfolder/instagram.png" alt="Instagram"></a>
-            </div>
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul>
+                <div class="logo">
+                    <img src="Picfolder/NanaLogo.png" alt="Nana's Logo">
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="About.html">About</a>
+                    <!-- Dropdown for About -->
+                    <ul class="dropdown">
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#menu">Cuisine</a>
+                    <!-- Dropdown for Menu -->
+                    <ul class="dropdown">
+                        <li><a href="#korean">Korean</a></li>
+                        <li><a href="#fusion">Fusion</a></li>
+                        <li><a href="#desserts">Desserts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
         </div>
-        <div class="copyright">
-            <p>&copy; 2024 Nana's Kimchi & Korean Restaurant. All rights reserved.</p>
-        </div>
-    </footer>
 
+    <script src= "About.js"></script>
 </body>
 </html>
+

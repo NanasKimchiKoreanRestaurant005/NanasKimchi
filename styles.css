@@ -1,6 +1,6 @@
 /* General Reset */
 
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dancing+Script:wght@700&family=Dongle&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dancing+Script:wght@700&family=Do+Hyeon&family=Dongle&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap');
 
 
 * {
@@ -11,8 +11,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #8a2026;
+    background-image: url("Picfolder/Background.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -21,13 +25,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     position: relative;
+    margin-top: 5px;
 }
 
 header .logo img {
-    top: 50px;
-    height: 120px;
+    top: 10px;
+    height: 10vw;
+}
+
+/* For larger screens (desktops, tablets) */
+@media (min-width: 1024px) {
+    header .logo img {
+        width: 10vw;  /* Make the logo smaller on larger screens */
+    }
+}
+
+/* For smaller screens (mobiles) */
+@media (max-width: 600px) {
+    header .logo img {
+        width: 10vw;  /* Increase logo size on smaller screens */
+    }
 }
 
 header nav {
@@ -35,7 +54,12 @@ header nav {
 }
 
 nav ul {
-    background-color: #ffffff85;
+    background: rgba(223, 19, 19, 0.31); 
+    border-radius: 30px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(90, 17, 17, 0.2);
     padding: 20px;
     border-radius: 25px;
 }
@@ -43,18 +67,17 @@ nav ul {
 .nav-links {
     display: flex;
     list-style: none;
-    transition: max-height 0.3s ease-in-out;
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .nav-links li a {
     text-decoration: none;
-    font-family: "Bagel Fat One", system-ui;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 1.2rem;
-    color: #000000;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -72,7 +95,14 @@ nav ul {
     cursor: pointer;
     gap: 5px;
     position: relative;
-    z-index: 1100; /* Ensure it stays above the menu */
+    z-index: 1100;
+    padding: 20px;
+    background: rgba(223, 19, 19, 0.31); 
+    border-radius: 30px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(90, 17, 17, 0.2);
 }
 
 .hamburger span {
@@ -98,15 +128,19 @@ nav ul {
 
 /* Side Menu */
 .side-menu {
-    font-family: "Bagel Fat One", system-ui;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 1.7rem;
     position: fixed;
     top: 0;
     left: -250px; /* Initially hidden */
     width: 250px;
     height: 100%;
-    background: #5a0f13;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    background: rgba(168, 18, 18, 0.31); 
+    border-radius: 0px 10px ;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(90, 17, 17, 0.2);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -154,14 +188,53 @@ main {
     padding: 20px;
 }
 
+/* Adjust .content closer to the header */
 .content {
-    flex: 1 1 50%;
+    flex: 1 1 25%;
     max-width: 600px;
     padding: 20px;
+    background: rgba(223, 19, 19, 0.31); 
+    border-radius: 30px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(90, 17, 17, 0.2);
+    margin-top: 10px;
+}
+
+/* Keep headings and text aligned to the left */
+.content h1, 
+.content h2, 
+.content p {
+    margin-left: 20px;
+}
+
+/* Rearrange layout for smaller screens */
+@media (max-width: 850px) {
+    /* Stack content and image */
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        order: 1; /* Keep content above the image */
+        margin-top: 20px; /* Add spacing for clarity */
+    }
+
+    .image {
+        order: 2; /* Move image below the content */
+        margin-top: 20px; /* Add spacing from content */
+    }
+
+    .image img {
+        max-width: 90%; /* Ensure image scales well on smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
 }
 
 .content h1 {
-    font-family:"Bagel Fat One", system-ui;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 3.5rem;
     margin-top: 30px;
     margin-bottom: 1px;
@@ -178,9 +251,28 @@ main {
     margin-bottom: 20px;
 }
 
+.content h1 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 4.3rem;
+    margin-bottom: 1px;
+    margin-left: 30px;
+}
+.content h2 {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 2.5rem;
+}
+
+.content p {
+    font-family: "Dongle", sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
 .buttons {
     display: flex;
     gap: 10px;
+    margin-left: 30px;
 }
 
 .btn {
@@ -188,7 +280,7 @@ main {
     text-decoration: none;
     font-family: "Dongle", sans-serif;
     font-size: 1.6rem;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background 0.3s;
 }
 
@@ -212,7 +304,7 @@ main {
 
 .image {
     flex: 1 1 40%;
-    max-width: 500px;
+    max-width: 700px;
     text-align: center;
     shape-outside: circle(50%);
 }
