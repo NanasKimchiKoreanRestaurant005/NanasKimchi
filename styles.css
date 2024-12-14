@@ -36,7 +36,7 @@ header .logo img {
 }
 
 /* For larger screens (desktops, tablets) */
-@media (min-width: 1024px) {
+@media (min-width: 1310px) {
     header .logo img {
         width: 10vw;  /* Make the logo smaller on larger screens */
     }
@@ -178,7 +178,7 @@ nav ul {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1310px) {
     .nav-links {
         display: none; /* Hide navigation links */
     }
@@ -219,7 +219,7 @@ main {
 }
 
 /* Rearrange layout for smaller screens */
-@media (max-width: 850px) {
+@media (max-width: 1310px) {
     /* Stack content and image */
     main {
         flex-direction: column;
@@ -227,6 +227,7 @@ main {
     }
 
     .content {
+        max-width: 50%;
         order: 1; /* Keep content above the image */
         margin-top: 20px; /* Add spacing for clarity */
     }
@@ -237,7 +238,7 @@ main {
     }
 
     .image img {
-        max-width: 90%; /* Ensure image scales well on smaller screens */
+        max-width: 20%; /* Ensure image scales well on smaller screens */
         margin: 0 auto; /* Center the image */
     }
 }
@@ -325,7 +326,7 @@ main {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1310px) {
     header {
         justify-content: space-between;
     }
