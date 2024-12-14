@@ -230,6 +230,7 @@ main {
         max-width: 50%;
         order: 1; /* Keep content above the image */
         margin-top: 20px; /* Add spacing for clarity */
+        margin-right: 50px;
     }
 
     .image {
