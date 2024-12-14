@@ -31,7 +31,7 @@ header {
 }
 
 header .logo img {
-    top: 10px;
+    top: 20px;
     height: 10vw;
 }
 
@@ -165,8 +165,17 @@ nav ul {
 }
 
 .side-menu ul li a:hover {
-    color: #ffc107;
+    color: #8d0000;
 }
+
+.side-menu li a.active,
+.side-menu li a:hover {
+    background: #ffc107;
+    color: #8d0000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

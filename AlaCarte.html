@@ -3,237 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Korean Samgyupsal, Korean Restaurant, Restaurant in Capiz, Korean Restaurant in the Philippines, Restaurant near me">
+    <meta name="description" content="Nana's Kimchi & Korean is a charming, aesthetically pleasing restaurant serving authentic Korean cuisine. Delight in traditional dishes crafted with love, fresh ingredients, and bold flavors in a warm, inviting ambiance that blends modern elegance with Korean heritage.">
     <title>Nana's Kimchi & Korean Restaurant</title>
-    <link rel="stylesheet" href="Menu.css">
     <link rel="icon" type="image/x-icon" href="Picfolder/NanaLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-
-<div class="container">
     <header>
-            
+        <div class="logo">
+            <img src="Picfolder/NanaLogo.png" alt="Nana's Logo">
+        </div>
         <nav>
-            <ul>
-                <li class="box-button"><a href="About.html">About</a></li>
-                <li class="box-button"><a href="Nanasbento.html">Cuisine</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html" class="active">About</a></li>
+                <li>
+                    <a href="AlaCarte.html">Cuisine</a>
+                    <!-- Dropdown for Cuisine -->
+                    <ul class="dropdown">
+                        <li><a href="NanaBento.html">Nana's Bento (Lunch Box)</a></li>
+                        <li><a href="Samgyupsal.html">Samgyusal Set</a></li>
+                        <li><a href="RawMeat.html">Raw Meat</a></li>
+                        <li><a href="AlaCarte.html">Ala Carte</a></li>
+                        <li><a href="Drinks.html">Drinks</a></li>
+                        <li><a href="SideDishes.html">Side Dishes and Sauces</a></li>
+                    </ul>
+                </li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Blog.html">Blog</a></li>
             </ul>
         </nav>
 
-                <a href="index.html" class="logo-container"><img src="Picfolder/NanaLogo.png" alt="Nana's Kimchi & Korean Restaurant Logo" class="logo"></a>
-
-        <nav>
-            <ul>
-                <li class="box-button"><a href="Feedback.html">Feedback</a></li>
-                <li class="box-button"><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         
-    </header>
-
-    <section id="menu" class="menu-section">
-        <div class="menu-categories">
-            <button><a href="NanasBento.html">Nana's Bento (Lunch Box)</a></button>
-            <button><a href="SamgyupalSet.html">Samgyupsal Set</a></button>
-            <button><a href="RawMeat.html">Raw Meat</a></button>
-            <button style="background-color: #e15f3d;"><a href="AlaCarte.html">Ala Carte</a></button>
-            <button><a href="Drinks.html">Drinks</a></button>
-            <button><a href="SideDishes&Sauces.html">Side Dishes and Sauces</a></button>
+        <!-- Side Menu -->
+        <div class="side-menu">
+            <ul>
+                <div class="logo">
+                    <img src="Picfolder/NanaLogo.png" alt="Nana's Logo">
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li>
+                    <a href="#menu">Cuisine</a>
+                    <!-- Dropdown for Menu -->
+                    <ul class="dropdown">
+                        <li><a href="NanaBento.html">Nana's Bento (Lunch Box)</a></li>
+                        <li><a href="Samgyupsal.html">Samgyusal Set</a></li>
+                        <li><a href="RawMeat.html">Raw Meat</a></li>
+                        <li><a href="AlaCarte.html">Ala Carte</a></li>
+                        <li><a href="Drinks.html">Drinks</a></li>
+                        <li><a href="SideDishes.html">Side Dishes and Sauces</a></li>
+                    </ul>
+                </li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+            </ul>
         </div>
 
-        <section id="AlaCarte">
-            <div class="menu-items">
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Teokbokki 500g.jpg" alt="Teokbokki 500g">
-                            <h3>Teokbokki 500g</h3>
-                            <p>Price: ₱169.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="Teokbokki">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Teokbokki 500g</h3>
-                            <p>Rice cake, fish cake , fish ball, squid ball cooked with hot pepper paste and some others.</p>
-                            <br>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
-                            <p>"Great texture and a good level of spice. Really satisfying!"</p>
-                            <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
-                            <p>"Absolutely loved this! Perfectly chewy and spicy."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
+    <section id="AlaCarte">
+        <div class="menu-items">
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Teokbokki 500g.jpg" alt="Teokbokki 500g">
+                        <h3>Teokbokki 500g</h3>
+                        <p>Price: ₱169.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="Teokbokki">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Teokbokki 500g</h3>
+                        <p>Rice cake, fish cake , fish ball, squid ball cooked with hot pepper paste and some others.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Great texture and a good level of spice. Really satisfying!"</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Absolutely loved this! Perfectly chewy and spicy."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
                     </div>
                 </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Teokbokki Tray 2500g.jpg" alt="Teokbokki Tray 2500g">
-                            <h3>Teokbokki Tray 2500g</h3>
-                            <p>Price: ₱899.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="teokbokkiTray">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Raw Doenjang Samgyupsal 250g</h3>
-                            <p>Rice cake, fish cake , fish ball, squid ball cooked with hot pepper paste and some others.</p>
-                            <br>
-                            <h1>Review</h1>
-                            <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
-                            <p>"The flavor was good, but the portion size felt a bit overwhelming."</p>
-                            <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
-                            <p>"Great for sharing! The spice level is on point."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Gochujang Samgyupsal Kimbap.jpg" alt="Gochujang Samgyupsal Kimbap">
-                            <h3>Gochujang Samgyupsal Kimbap</h3>
-                            <p>Price: ₱129.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="gochujangSamgyupsal">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Gochujang Samgyupsal Kimbap</h3>
-                            <p>Kimbob with hot pepper paste Samgyupsal</p>
-                            <br>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
-                            <p>"The spice from the gochujang was perfect—really flavorful!"</p>
-                            <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
-                            <p>"Nice flavors, but I wish it had a bit more kick."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Deonjang Samgyupsal Kimbap.jpg" alt="Deonjang Samgyupsal Kimbap">
-                            <h3>Deonjang Samgyupsal Kimbap</h3>
-                            <p>Price: ₱129.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="deonjangSamgyupsal">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Deonjang Samgyupsal Kimbap</h3>
-                            <p>Kimbob with Soybean paste Samgyupsal</p>
-                            <br>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
-                            <p>"Solid taste with a nice, savory kick from the doenjang."</p>
-                            <h2>⭐⭐☆☆☆ (2/5 stars)</h2>
-                            <p>"Good, but the flavor could be bolder."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Bulgogi Samgyulsal Kimbap.jpg" alt="Bulgogi Samgyulsal Kimbap">
-                            <h3>Bulgogi Samgyulsal Kimbap</h3>
-                            <p>Price: ₱129.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="bulgogiSamgyulsal">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Bulgogi Samgyulsal Kimbap</h3>
-                            <p>Kimbob with Soy sauce Samgyulsal</p>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
-                            <p>"Sweet and savory—really enjoyable!"</p>
-                            <h2>⭐⭐⭐☆☆ (3/5 star)</h2>
-                            <p>"Nice bulgogi flavor, but not particularly memorable."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Guchujang Chicken Kimbap.jpg" alt="Guchujang Chicken Kimbap">
-                            <h3>Guchujang Chicken Kimbap</h3>
-                            <p>Price: ₱129.00</p>
-                            <button class="preview-btn" data-item="guchujangChicken">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Guchujang Chicken Kimbap</h3>
-                            <p>Kimbob with Hot pepper paste Chicken</p>
-                            <br>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐☆☆ (3/5 stars)</h2>
-                            <p>"Nice bulgogi flavor, but not particularly memorable."</p>
-                            <h2>⭐⭐⭐⭐⭐ (5/5 stars)</h2>
-                            <p>"Perfect balance of heat and flavor, really loved it!"</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Doenjang Chicken Kimbap.jpg" alt="Doenjang Chicken Kimbap">
-                            <h3>Doenjang Chicken Kimbap</h3>
-                            <p>Price: ₱129.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="doenjangChicken">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Doenjang Chicken Kimbap</h3>
-                            <p>Doenjang Chicken Kimbap</p>
-                            <br>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐☆☆ (3/5 stars)</h2>
-                            <p>"Good flavor but could use more depth."</p>
-                            <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
-                            <p>"Savory and satisfying, definitely worth a try."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="maincontainer">
-                    <div class="thecard">
-                        <div class="thefront">
-                            <img src="AlaCartePicfolder/Bulgogi Chicken Kimbap.jpg" alt="Bulgogi Chicken Kimbap">
-                            <h3>Bulgogi Chicken Kimbap</h3>
-                            <p>Price: ₱129.00</p>
-                            <br>
-                            <button class="preview-btn" data-item="bulgogiChicken">Preview</button>
-                        </div>
-                        <div class="theback">
-                            <h3>Bulgogi Chicken Kimbap</h3>
-                            <p>Kimbob with Soy sauce Chicken</p>
-                            <h1>Review</h1>
-                            <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
-                            <p>"Tender chicken with a delicious sweet bulgogi flavor."</p>
-                            <h2>⭐⭐⭐☆☆ (3/5 star)</h2>
-                            <p>"Nice taste, but a bit mild for my preference."</p>
-                            <br>
-                            <button class="back-btn">Go Back</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
-        <script src="Menu.js"></script>
-    </body>
-    </html>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Teokbokki Tray 2500g.jpg" alt="Teokbokki Tray 2500g">
+                        <h3>Teokbokki Tray 2500g</h3>
+                        <p>Price: ₱899.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="teokbokkiTray">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Doenjang Samgyupsal 250g</h3>
+                        <p>Rice cake, fish cake , fish ball, squid ball cooked with hot pepper paste and some others.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"The flavor was good, but the portion size felt a bit overwhelming."</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Great for sharing! The spice level is on point."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Gochujang Samgyupsal Kimbap.jpg" alt="Gochujang Samgyupsal Kimbap">
+                        <h3>Gochujang Samgyupsal Kimbap</h3>
+                        <p>Price: ₱129.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="gochujangSamgyupsal">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Gochujang Samgyupsal Kimbap</h3>
+                        <p>Kimbob with hot pepper paste Samgyupsal</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"The spice from the gochujang was perfect—really flavorful!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Nice flavors, but I wish it had a bit more kick."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Deonjang Samgyupsal Kimbap.jpg" alt="Deonjang Samgyupsal Kimbap">
+                        <h3>Deonjang Samgyupsal Kimbap</h3>
+                        <p>Price: ₱129.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="deonjangSamgyupsal">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Deonjang Samgyupsal Kimbap</h3>
+                        <p>Kimbob with Soybean paste Samgyupsal</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Solid taste with a nice, savory kick from the doenjang."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 stars)</h2>
+                        <p>"Good, but the flavor could be bolder."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Bulgogi Samgyulsal Kimbap.jpg" alt="Bulgogi Samgyulsal Kimbap">
+                        <h3>Bulgogi Samgyulsal Kimbap</h3>
+                        <p>Price: ₱129.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="bulgogiSamgyulsal">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Bulgogi Samgyulsal Kimbap</h3>
+                        <p>Kimbob with Soy sauce Samgyulsal</p>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Sweet and savory—really enjoyable!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 star)</h2>
+                        <p>"Nice bulgogi flavor, but not particularly memorable."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Guchujang Chicken Kimbap.jpg" alt="Guchujang Chicken Kimbap">
+                        <h3>Guchujang Chicken Kimbap</h3>
+                        <p>Price: ₱129.00</p>
+                        <button class="preview-btn" data-item="guchujangChicken">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Guchujang Chicken Kimbap</h3>
+                        <p>Kimbob with Hot pepper paste Chicken</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 stars)</h2>
+                        <p>"Nice bulgogi flavor, but not particularly memorable."</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 stars)</h2>
+                        <p>"Perfect balance of heat and flavor, really loved it!"</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Doenjang Chicken Kimbap.jpg" alt="Doenjang Chicken Kimbap">
+                        <h3>Doenjang Chicken Kimbap</h3>
+                        <p>Price: ₱129.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="doenjangChicken">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Doenjang Chicken Kimbap</h3>
+                        <p>Doenjang Chicken Kimbap</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 stars)</h2>
+                        <p>"Good flavor but could use more depth."</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Savory and satisfying, definitely worth a try."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="AlaCartePicfolder/Bulgogi Chicken Kimbap.jpg" alt="Bulgogi Chicken Kimbap">
+                        <h3>Bulgogi Chicken Kimbap</h3>
+                        <p>Price: ₱129.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="bulgogiChicken">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Bulgogi Chicken Kimbap</h3>
+                        <p>Kimbob with Soy sauce Chicken</p>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Tender chicken with a delicious sweet bulgogi flavor."</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 star)</h2>
+                        <p>"Nice taste, but a bit mild for my preference."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+    <script src= "menu.js"></script>
+
+</body>
+</html>
