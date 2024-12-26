@@ -1,6 +1,6 @@
 /* General Reset */
 
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dancing+Script:wght@700&family=Do+Hyeon&family=Dongle&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dancing+Script:wght@700&family=Do+Hyeon&family=Dongle&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sevillana&display=swap');
 
 * {
     margin: 0;
@@ -11,7 +11,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-image: url("Picfolder/Background.jpg");
-    overflow: hidden;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -25,12 +24,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    position: relative;
-    margin-top: 5px;
+    position: sticky; /* Change to sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it appears above other elements */
+    margin-top: 0; /* Remove margin to prevent offset when sticky */
 }
 
 header .logo img {
-    top: 20px;
+    top: 10px;
     height: 10vw;
 }
 
@@ -44,7 +45,7 @@ header .logo img {
 /* For smaller screens (mobiles) */
 @media (max-width: 600px) {
     header .logo img {
-        width: 10vw;  /* Increase logo size on smaller screens */
+        width: 20vw;  /* Increase logo size on smaller screens */
     }
 }
 
@@ -69,6 +70,7 @@ nav ul {
 }
 
 .nav-links li {
+    position: relative; /* Needed for dropdown positioning */
     margin: 0 5px;
 }
 
@@ -87,21 +89,53 @@ nav ul {
     color: #8d0000;
 }
 
+/* Dropdown Menu */
+.nav-links .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(223, 19, 19, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    list-style: none;
+}
+
+.nav-links .dropdown li {
+    margin: 5px 0;
+}
+
+.nav-links .dropdown li a {
+    text-decoration: none;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.nav-links .dropdown li a:hover {
+    background: #ffc107;
+    color: #8d0000;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    position: relative;
-    z-index: 1100;
     padding: 20px;
-    background: rgba(223, 19, 19, 0.31); 
+    background: rgba(223, 19, 19, 0.31);
     border-radius: 30px;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(90, 17, 17, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .hamburger span {
@@ -112,39 +146,37 @@ nav ul {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Active State: Hamburger to X */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg); /* Top bar becomes diagonal */
+    transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0; /* Middle bar disappears */
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Bottom bar becomes diagonal */
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Side Menu */
 .side-menu {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 1.7rem;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden */
+    left: -250px;
     width: 250px;
     height: 100%;
-    background: rgba(168, 18, 18, 0.31); 
-    border-radius: 0px 10px ;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(90, 17, 17, 0.2);
+    background: rgba(168, 18, 18, 0.31);
+    border-radius: 0px 10px;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     padding: 20px;
     transition: left 0.3s ease-in-out;
-    z-index: 1000;
+}
+
+.side-menu.active {
+    left: 0;
 }
 
 .side-menu ul {
@@ -154,27 +186,234 @@ nav ul {
 
 .side-menu ul li {
     margin-bottom: 20px;
+    position: relative; /* Needed for dropdown positioning */
 }
 
-.side-menu ul li a {
+.side-menu li a {
     text-decoration: none;
-    color: #fff;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 1.2rem;
-    transition: color 0.3s;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.side-menu ul li a:hover {
-    color: #ffc107;
+.side-menu li a.active,
+.side-menu li a:hover {
+    background: #ffc107;
+    color: #8d0000;
+}
+
+.side-menu .logo img {
+    width: 110%;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px; /* Optional: Add a rounded style */
+}
+
+/* Dropdown Menu */
+.side-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(223, 19, 19, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    list-style: none;
+}
+
+.side-menu .dropdown li {
+    margin: 5px 0;
+}
+
+.side-menu .dropdown li a {
+    text-decoration: none;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.side-menu .dropdown li a:hover {
+    background: #ffc107;
+    color: #8d0000;
+}
+
+.side-menu ul li:hover .dropdown {
+    display: block;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide navigation links */
+        display: none;
     }
 
     .hamburger {
-        display: flex; /* Show hamburger menu */
+        display: flex;
+    }
+}
+
+.background {
+    background: rgba(223, 19, 19, 0.31);
+    border-radius: 30px 30px 0 0;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.Title h1 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 3.5rem;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    background: rgba(244, 180, 76, 0.50); 
+    color: #fff;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(90, 17, 17, 0.2);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#slider {
+    position: relative;
+    width: 50%;
+    height: 39vw;
+    margin: 10px auto;
+    transform-style: preserve-3d;
+    font-family: "Do Hyeon", sans-serif;
+    perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+    #slider {
+        margin: 5px auto;
+        width: 50%;
+        height: 10vw;
+    }
+}
+
+input[type="radio"] {
+    position: relative;
+    top: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 20px 10px 0 0;
+    transform: translateX(-83px);
+    opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+    input[type="radio"] {
+        margin: 20px 10px 0 0;
+        width: 70%;
+        height: 40vw;
+    }
+}
+
+input[type="radio"]:nth-child(5) {
+    margin-right: 0px;
+}
+
+input[type="radio"]:checked {
+    opacity: 1;
+}
+
+#slider label {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 400ms ease;
+}
+
+#s1:checked ~ #slide1,
+#s2:checked ~ #slide2,
+#s3:checked ~ #slide3,
+#s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+    transform: translate3d(0%, 0, 0px);
+}
+
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide4,
+#s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+    transform: translate3d(20%, 0, -100px);
+}
+
+#s1:checked ~ #slide5,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2,
+#s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+    transform: translate3d(-20%, 0, -100px);
+}
+
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide4,
+#s3:checked ~ #slide5,
+#s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+    transform: translate3d(40%, 0, -250px);
+}
+
+#s1:checked ~ #slide4,
+#s2:checked ~ #slide5,
+#s3:checked ~ #slide1,
+#s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+    transform: translate3d(-40%, 0, -250px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) { /* Tablets */
+    #slider {
+        width: 70%;
+        height: 40vw;
+    }
+
+    #slider label {
+        font-size: 50px;
+    }
+
+    input[type="radio"] {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobiles */
+    #slider {
+        width: 90%;
+        height: 50vw;
+    }
+
+    #slider label {
+        font-size: 40px;
+    }
+
+    input[type="radio"] {
+        width: 10px;
+        height: 10px;
     }
 }
 
@@ -189,7 +428,7 @@ nav ul {
     position: relative;
     width: 400px;
     height: 500px;
-    margin: 10px; /* Adjust for spacing between items */
+    margin: 20px; /* Adjust for spacing between items */
 }
 
 .thecard {
@@ -224,15 +463,24 @@ nav ul {
 
 .thefront img {
     width: 70%;
-    height: 70%;
+    height: 60%;
 }
 
 .thefront h3 {
-    font-size: 25px;
+    text-align: center;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 30px;
+}
+
+.thefront h2 {
+    text-align: center;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 20px;
 }
 
 .thefront p {
-    font-size: 15px;
+    font-family: "Dongle", sans-serif;
+    font-size: 30px;
 }
 
 .theback {
@@ -242,123 +490,206 @@ nav ul {
 }
 
 .theback h1 {
+    word-spacing: 2px;
+    text-align: center;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 25px;
 }
 
+.theback h2 {
+    word-spacing: 2px;
+    font-family: "Dongle", sans-serif;
+    font-size: 20px;
+}
+
 .theback h3 {
+    word-spacing: 2px;
+    text-align: center;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 35px;
 }
 
 .theback p {
-    font-size: 15px;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.preview-btn {
-    background-color: #e0cd61; 
-    border-radius: 30px;
-    color: #000;
-    padding: 10px 70px;
-    margin: 10px;
     text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.back-btn {
-    background-color: #e0cd61; 
-    border-radius: 30px;
-    color: #000;
-    padding: 10px 70px;
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-section a {
-    text-decoration: none;
-    color: #000;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: white;
-    margin-top: 5%;
-    margin-left: 20%;
-    padding: 20px;
-    width: 60%;
-    border-radius: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 80vh;
-}
-
-.modal-content img {
-    width: 50%;
-    height: 10%;
-    border-radius: 10px;
-}
-
-.modal-content h2 {
-    margin-top: 20px;
+    word-spacing: 2px;
+    font-family: "Dongle", sans-serif;
     font-size: 24px;
 }
 
-.modal-content p {
-    margin: 10px 0;
+.preview-btn {
+    border-radius: 5px;
+    padding: 10px 70px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    background: #ffc107;
+    color: #8d0000;
+    font-family: "Do Hyeon", sans-serif;
 }
 
-.modal-content::-webkit-scrollbar {
-    width: 10px;
+.back-btn {
+    border-radius: 5px;
+    padding: 10px 70px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    background: #ffc107;
+    color: #8d0000;
+    font-family: "Do Hyeon", sans-serif;
 }
 
-.modal-content::-webkit-scrollbar-thumb {
-    background: #d4af37;
+.search-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    
+}
+
+.search-container input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
+    border-radius: 30px 0 0 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.search-container button {
+    font-family: "Do Hyeon", sans-serif;
+    padding: 10px;
+    border: none;
+    background-color: #990000;
+    color: white;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    font-family: "Do Hyeon", sans-serif;
+    background: #ffc107;
+    color: #8d0000;
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    background: rgba(223, 19, 19, 0.31);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+}
+
+.menu-categories a{
+    text-decoration: none;
+    color: #861d1d;
+}
+
+.menu-categories button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.2rem;
+    background-color: #ffc107;
+    padding: 5px 10px;
     border-radius: 10px;
 }
 
-/* Modal Close Button Styles */
-.modal .close {
-    position: absolute;  /* Position it absolutely in relation to its parent */
-    top: 90px;           /* Distance from the top of the modal */
-    right: 220px;         /* Distance from the right of the modal */
-    background-color: rgba(0, 0, 0, 0.7);  /* Dark background for contrast */
-    color: white;        /* White text color */
-    font-size: 24px;     /* Larger font for visibility */
-    border: none;        /* No border */
-    border-radius: 50%;  /* Round shape */
-    padding: 10px 15px;  /* Padding for size */
-    cursor: pointer;     /* Cursor changes to pointer on hover */
-    z-index: 10;         /* Ensure it appears on top of other content */
+.menu-categories button:hover {
+    background: #bf6f31;
+    color: #ebe2d1;
 }
 
-.modal .close:hover {
-    background-color: rgba(0, 0, 0, 0.9);  /* Darker background on hover */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Additional responsive styles */
+@media (max-width: 1024px) {
+    .maincontainer {
+        width: 300px;
+        height: 400px;
+    }
+
+    .thefront img, .theback img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .preview-btn, .back-btn {
+        padding: 10px 50px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        height: auto;
+    .maincontainer {
+        width: 250px;
+        height: 350px;
+    }
+
+    .thefront img, .theback img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .preview-btn, .back-btn {
+        padding: 10px 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .maincontainer {
+        width: 200px;
+        height: 300px;
+    }
+
+    .thefront img, .theback img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .preview-btn, .back-btn {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .search-container input {
+        width: 80%;
+    }
+
+    .search-container button {
+        padding: 10px;
+    }
+
+    .menu-categories button {
+        padding: 5px 10px;
+        font-size: 1rem;
     }
 }

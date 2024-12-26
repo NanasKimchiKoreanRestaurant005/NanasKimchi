@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Korean Samgyupsal, Korean Restaurant, Restaurant in Capiz, Korean Restaurant in the Philippines, Restaurant near me">
     <meta name="description" content="Welcome to Nana's Kimchi & Korean Restaurant, where we serve Authentic Korean Kimchi & Samgyupsal! The best kimchi – taste it to believe it! Enjoy our affordable Korean BBQ, Samgyupsal buffet, and family-friendly atmosphere in Roxas City, Capiz!">
-    <title>Menu | Nana's Kimchi & Korean Restaurant</title>
+    <title>Cuisine | Nana's Kimchi & Korean Restaurant</title>
     <link rel="icon" type="image/x-icon" href="Picfolder/NanaLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="menu.css">
@@ -18,17 +18,16 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="About.html" class="active">About</a></li>
+                <li><a href="About.html">About</a></li>
                 <li>
-                    <a href="Cuisine.html">Cuisine</a>
-                    <!-- Dropdown for Cuisine -->
+                    <a href="Cuisine.html" class="active">Cuisine</a>
                     <ul class="dropdown">
-                        <li><a href="NanaBento.html">Nana's Bento (Lunch Box)</a></li>
-                        <li><a href="Samgyupsal.html">Samgyusal Set</a></li>
-                        <li><a href="RawMeat.html">Raw Meat</a></li>
-                        <li><a href="AlaCarte.html">Ala Carte</a></li>
-                        <li><a href="Drinks.html">Drinks</a></li>
-                        <li><a href="SideDishes.html">Side Dishes and Sauces</a></li>
+                        <li><a href="#Bento">Nana's Bento (Lunch Box)</a></li>
+                        <li><a href="#Samgyupsal">Samgyupsal Set</a></li>
+                        <li><a href="#RawMeat">Raw Meat</a></li>
+                        <li><a href="#AlaCArte">Ala Carte</a></li>
+                        <li><a href="#Drinks">Drinks</a></li>
+                        <li><a href="#SideDishes">Side Dishes & Sauces</a></li>
                     </ul>
                 </li>
                 <li><a href="Feedback.html">Feedback</a></li>
@@ -41,39 +40,714 @@
             <span></span>
             <span></span>
         </div>
-        
-        <!-- Side Menu -->
+
         <div class="side-menu">
+            <div class="logo">
+                <img src="Picfolder/NanaLogo.png" alt="Logo">
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search in Menu...">
+                <button id="search-button">Search</button>
+            </div>
+
             <ul>
-                <div class="logo">
-                    <img src="Picfolder/NanaLogo.png" alt="Nana's Logo">
-                </div>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li>
-                    <a href="Cuisine.html">Cuisine</a>
-                    <!-- Dropdown for Menu -->
+                    <a href="Cuisine.html" class="active">Cuisine</a>
                     <ul class="dropdown">
-                        <li><a href="NanaBento.html">Nana's Bento (Lunch Box)</a></li>
-                        <li><a href="Samgyupsal.html">Samgyusal Set</a></li>
-                        <li><a href="RawMeat.html">Raw Meat</a></li>
-                        <li><a href="AlaCarte.html">Ala Carte</a></li>
-                        <li><a href="Drinks.html">Drinks</a></li>
-                        <li><a href="SideDishes.html">Side Dishes and Sauces</a></li>
+                        <li><a href="#Bento">Nana's Bento (Lunch Box)</a></li>
+                        <li><a href="#Samgyupsal">Samgyupsal Set</a></li>
+                        <li><a href="#RawMeat">Raw Meat</a></li>
+                        <li><a href="#AlaCArte">Ala Carte</a></li>
+                        <li><a href="#Drinks">Drinks</a></li>
+                        <li><a href="#SideDishes">Side Dishes & Sauces</a></li>
                     </ul>
                 </li>
                 <li><a href="Feedback.html">Feedback</a></li>
                 <li><a href="Blog.html">Blog</a></li>
             </ul>
         </div>
+    </header>
 
-    <section id="AlaCarte">
+    <div class="background">
+        <div class="Title">
+            <h1>🍽️ Popular Dishes</h1>
+        </div>
+
+        <div id="slider">
+            <input type="radio" name="slider" id="s1" checked />
+            <input type="radio" name="slider" id="s2" />
+            <input type="radio" name="slider" id="s3" />
+            <input type="radio" name="slider" id="s4" />
+            <input type="radio" name="slider" id="s5" />
+    
+            <!-- Slide 1 -->
+            <label for="s1" id="slide1" class="slide">
+                <div class="menu-items">
+                    <div class="maincontainer">
+                        <div class="thecard">
+                            <div class="thefront">
+                                <img src="BentoPicfolder/Pork Gochujang bento.jpg" alt="Pork Gochujang Bento">
+                                <h3>Pork Gochujang Bento</h3>
+                                <p>Price: ₱135.20</p>
+                                <button class="preview-btn" data-item="Pork Gochujang Bento">Preview</button>
+                            </div>
+                            <div class="theback">
+                                <h3>Pork Gochujang Bento</h3>
+                                <p>A bento box featuring spicy pork with gochujang, rice, and fresh side dishes.</p>
+                                <h1>Review</h1>
+                                <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                                <p>"Perfect balance of spice and sweetness."</p>
+                                <button class="back-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+    
+            <!-- Slide 2 -->
+            <label for="s2" id="slide2" class="slide">
+                <div class="menu-items">
+                    <div class="maincontainer">
+                        <div class="thecard">
+                            <div class="thefront">
+                                <img src="BentoPicfolder/Pork Doenjang Bento.jpg" alt="Pork Doenjang Bento">
+                                <h3>Pork Doenjang Bento</h3>
+                                <p>Price: ₱135.20</p>
+                                <button class="preview-btn" data-item="Pork Doenjang Bento">Preview</button>
+                            </div>
+                            <div class="theback">
+                                <h3>Pork Doenjang Bento</h3>
+                                <p>Marinated pork in soybean paste sauce served with rice and sides.</p>
+                                <h1>Review</h1>
+                                <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                                <p>"Rich and savory. Highly recommended!"</p>
+                                <button class="back-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+    
+            <!-- Slide 3 -->
+            <label for="s3" id="slide3" class="slide">
+                <div class="menu-items">
+                    <div class="maincontainer">
+                        <div class="thecard">
+                            <div class="thefront">
+                                <img src="BentoPicfolder/Pork Bulgogi Bento.jpg" alt="Pork Bulgogi Bento">
+                                <h3>Pork Bulgogi Bento</h3>
+                                <p>Price: ₱135.20</p>
+                                <button class="preview-btn" data-item="Pork Bulgogi Bento">Preview</button>
+                            </div>
+                            <div class="theback">
+                                <h3>Pork Bulgogi Bento</h3>
+                                <p>Savory pork bulgogi with sesame and garlic accents.</p>
+                                <h1>Review</h1>
+                                <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                                <p>"Great flavor, but could use more sides."</p>
+                                <button class="back-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+    
+            <!-- Slide 4 -->
+            <label for="s4" id="slide4" class="slide">
+                <div class="menu-items">
+                    <div class="maincontainer">
+                        <div class="thecard">
+                            <div class="thefront">
+                                <img src="AlaCartePicfolder/Teokbokki 500g.jpg" alt="Teokbokki 500g">
+                                <h3>Teokbokki 500g</h3>
+                                <p>Price: ₱135.20</p>
+                                <button class="preview-btn" data-item="Teokbokki">Preview</button>
+                            </div>
+                            <div class="theback">
+                                <h3>Teokbokki 500g</h3>
+                                <p>Chewy rice cakes in spicy-sweet sauce with fish cakes.</p>
+                                <h1>Review</h1>
+                                <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                                <p>"Perfectly chewy and deliciously spicy!"</p>
+                                <button class="back-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+    
+            <!-- Slide 5 -->
+            <label for="s5" id="slide5" class="slide">
+                <div class="menu-items">
+                    <div class="maincontainer">
+                        <div class="thecard">
+                            <div class="thefront">
+                                <img src="AlaCartePicfolder/Bulgogi Samgyulsal Kimbap.jpg" alt="Bulgogi Samgyupsal Kimbap">
+                                <h3>Bulgogi Samgyupsal Kimbap</h3>
+                                <p>Price: ₱103.20</p>
+                                <button class="preview-btn" data-item="Bulgogi Samgyupsal Kimbap">Preview</button>
+                            </div>
+                            <div class="theback">
+                                <h3>Bulgogi Samgyupsal Kimbap</h3>
+                                <p>Delicious seaweed rolls stuffed with bulgogi and vegetables.</p>
+                                <h1>Review</h1>
+                                <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                                <p>"Fresh and tasty with a hint of sweetness."</p>
+                                <button class="back-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
+        </div>
+
+        <br><br>
+
+    <div class="background2">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search in Menu...">
+            <button id="search-button">Search</button>
+        </div>
+    
+        <div class="menu-categories">
+            <button><a href="#Bento" class="active">Nana's Bento (Lunch Box)</a></button>
+            <button><a href="#Samgyupsal">Samgyupsal Set</a></button>
+            <button><a href="#RawMeat">Raw Meat</a></button>
+            <button><a href="#AlaCArte">Ala Carte</a></button>
+            <button><a href="#Drinks">Drinks</a></button>
+            <button><a href="#SideDishes">Side Dishes & Sauces</a></button>
+        </div>
+    </div>
+
+    <section id="Bento">
+
+        <div class="Title">
+            <h1>🍱Nana's Bento (Lunch Box)</h1>
+        </div>
+
+        <div class="menu-items">
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="BentoPicfolder/Pork Gochujang bento.jpg" alt="Pork Gochujang Bento">
+                        <h3>Pork Gochujang Bento</h3>
+                        <h2>🔥Popular</h2>
+                        <p>Price: ₱135.20</p>
+                        <button class="preview-btn" data-item="porkGochujang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Pork Gochujang Bento</h3>
+                        <p>Hot pepper paste Samgyupsal with 3 side dishes and lettuce. Side dishes can vary based on availability.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"This dish is absolutely delicious!"</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Amazing flavors, would order again."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="BentoPicfolder/Pork Doenjang Bento.jpg" alt="Pork Doenjang Bento">
+                        <h3>Pork Doenjang Bento</h3>
+                        <h2>🔥Popular</h2>
+                        <p>Price: ₱135.20</p>
+                        <button class="preview-btn" data-item="porkDoenjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Pork Doenjang Bento</h3>
+                        <p>Fermented Soybean paste Samgyupsal with 3 side dishes and lettuce. Side dishes can be changed depending on availability.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Perfectly balanced flavors!"</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Tasty, but could use a bit more sauce."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="BentoPicfolder/Pork Bulgogi Bento.jpg" alt="Pork Bulgogi Bento">
+                        <h3>Pork Bulgogi Bento</h3>
+                        <h2>🔥Popular</h2>
+                        <p>Price: ₱135.20</p>
+                        <button class="preview-btn" data-item="porkBulgogi">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Pork Bulgogi Bento</h3>
+                        <p>Soy sauce Samgyupsal with 3 side dishes and lettuce. Side dishes can be changed depending on availability.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Nice portion but could be bolder."</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Good, though I wanted a stronger bulgogi taste."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="BentoPicfolder/Chicken Gochujang Bento.jpg" alt="Chicken Gochujang Bento">
+                        <h3>Chicken Gochujang Bento</h3>
+                        <br><br>
+                        <p>Price: ₱135.20</p>
+                        <button class="preview-btn" data-item="chickenGochujang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Chicken Gochujang Bento</h3>
+                        <p>Hot pepper paste chicken with 3 side dishes and lettuce. Side dishes can be changed depending on availability.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐☆☆☆ (2/5 stars)</h2>
+                        <p>"Tender but flavor didn’t hit."</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 stars)</h2>
+                        <p>"Spicy and full of flavor!"</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="BentoPicfolder/Chicken Doenjang Bento.jpg" alt="Chicken Doenjang Bento">
+                        <h3>Chicken Doenjang Bento</h3>
+                        <br><br>
+                        <p>Price: ₱135.20</p>
+                        <button class="preview-btn" data-item="chickenDoenjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Chicken Doenjang Bento</h3>
+                        <p>Fermented Soybean paste chicken with 3 side dishes and lettuce. Side dishes can be changed depending on availability.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Solid but mild."</p>
+                        <h2>⭐☆☆☆☆ (1/5 star)</h2>
+                        <p>"Lacked intensity."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="BentoPicfolder/Chicken Bulgogi Bento.jpg" alt="Chicken Bulgogi Bento">
+                        <h3>Chicken Bulgogi Bento</h3>
+                        <br><br>
+                        <p>Price: ₱135.20</p>
+                        <button class="preview-btn" data-item="chickenBulgogi">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Chicken Bulgogi Bento</h3>
+                        <p>Fermented Soybean paste chicken with 3 side dishes and lettuce. Side dishes can be changed depending on availability.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 stars)</h2>
+                        <p>"Delicious and savory!"</p>
+                        <h2>⭐⭐⭐☆ (3/5 stars)</h2>
+                        <p>"Good but a bit dry."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="Samgyupsal">
+        <div class="Title">
+            <h1>🫕Samgyupsal Set</h1>
+        </div>
+        <div class="menu-items">
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SamyupalSetPicfolder/Set A (good for 3~4).jpg" alt="Set A (good for 3~4)">
+                        <h3>Set A (good for 3~4)</h3>
+                        <br><br>
+                        <p>Price: ₱719.20</p>
+                        <button class="preview-btn" data-item="SetA">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Set A (good for 3~4)</h3>
+                        <p>3 Raw meat (pork 2×250g, boneless chicken 1×200g), 3 side dishes, 2 sauces, 250g Tteokbokki, 100g lettuce, 4 chopsticks</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Perfect for sharing! Great portions and flavors that balance well.</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Decent, but could use more variety in side dishes to make it feel complete."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SamyupalSetPicfolder/Set B (good for 5~6).jpg" alt="Set B (good for 5~6)">
+                        <h3>Set B (good for 5~6)</h3>
+                        <br><br>
+                        <p>Price: ₱1,039.20</p>
+                        <button class="preview-btn" data-item="SetB">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Set B (good for 5~6)</h3>
+                        <p>5 Raw meat (pork 3×250g, boneless chicken 2×200g), 4 side dishes, 3 sauces, 500g Tteokbokki, 150g lettuce, 6 chopsticks</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Ideal for a small group, with plenty of options and tasty mains."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Not quite enough flavor for the price; felt like it needed more seasoning overall."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SamyupalSetPicfolder/Set C (good for 8~10).jpg" alt="Set C (Good for 8~10)">
+                        <h3>Set C (Good for 8~10)</h3>
+                        <br><br>
+                        <p>Price: ₱1,359.20</p>
+                        <button class="preview-btn" data-item="SetC">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Set C (Good for 8~10)</h3>
+                        <p>7 Raw meat (pork 4×250g, boneless chicken 3×200g), 6 side dishes, 3 sauces, 500g Tteokbokki, 200g lettuce, 8 chopsticks</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Generous portions and amazing selection! Perfect for a big gathering."</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"It was okay, but some dishes felt a bit bland; could be better for the size."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="RawMeat">
+        <div class="Title">
+            <h1>🥓Raw Meat</h1>
+        </div>
+        <div class="menu-items">
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Gochujang Samgyupsal 250g.jpg" alt="Raw Gochujang Samgyupsal 250g">
+                        <h3>Raw Gochujang Samgyupsal 250g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawGochujang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Gochujang Samgyupsal 250g</h3>
+                        <p>Marinated Samgyupsal, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Packed with flavor and perfect for grilling, though a bit on the spicy side!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Nice kick, but the marinade could use a bit more depth."</p>
+                        <br>
+
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Doenjang Samgyupsal 250g.jpg" alt="Raw Doenjang Samgyupsal 250g">
+                        <h3>Raw Doenjang Samgyupsal 250g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawDoenjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Doenjang Samgyupsal 250g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Rich, savory taste with an amazing balance of flavors. A must-try!"</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Loved the earthy doenjang flavor, though a tad salty for my taste."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Bulgogi Samgyupsal 250g.jpg" alt="Raw Bulgogi Samgyupsal 250g">
+                        <h3>Raw Bulgogi Samgyupsal 250g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawBulgogi">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Bulgogi Samgyupsal 250g</h3>
+                        <p>Marinated Samgyupsal, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Sweet, tender, and perfect for grilling. Just delicious!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Good flavor but lacked the strong bulgogi sweetness I was hoping for."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Gochujang Chicken 200g.jpg" alt="Raw Gochujang Chicken 200g">
+                        <h3>Raw Gochujang Chicken 200g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawGochujang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Gochujang Chicken 200g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 stars)</h2>
+                        <p>"Spicy and flavorful, but a bit overwhelming without side dishes."</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Perfect level of heat and very tender, excellent for a spicy bite."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Doenjang Chicken 200g.jpg" alt="Raw Doenjang Chicken 200g">
+                        <h3>Raw Doenjang Chicken 200g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawDoenjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Doenjang Chicken 200g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Nice and savory with a great texture, though the taste is subtle."</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 star)</h2>
+                        <p>"Fantastic, earthy doenjang flavor that shines through every bite!"</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Bulgogi Chicken 200g.jpg" alt="Raw Bulgogi Chicken 200g">
+                        <h3>Raw Bulgogi Chicken 200g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawBulgogi">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Bulgogi Chicken 200g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Sweet and mild, great for beginners to Korean flavors."</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 stars)</h2>
+                        <p>"Perfectly marinated with a delightful hint of sweetness; would order again!"</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div><div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Gochujang Samgyupsal 250g.jpg" alt="Raw Gochujang Samgyupsal 250g">
+                        <h3>Raw Gochujang Samgyupsal 250g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawGochujang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Gochujang Samgyupsal 250g</h3>
+                        <p>Marinated Samgyupsal, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Packed with flavor and perfect for grilling, though a bit on the spicy side!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Nice kick, but the marinade could use a bit more depth."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Doenjang Samgyupsal 250g.jpg" alt="Raw Doenjang Samgyupsal 250g">
+                        <h3>Raw Doenjang Samgyupsal 250g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawDoenjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Doenjang Samgyupsal 250g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Rich, savory taste with an amazing balance of flavors. A must-try!"</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Loved the earthy doenjang flavor, though a tad salty for my taste."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Bulgogi Samgyupsal 250g.jpg" alt="Raw Bulgogi Samgyupsal 250g">
+                        <h3>Raw Bulgogi Samgyupsal 250g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawBulgogi">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Bulgogi Samgyupsal 250g</h3>
+                        <p>Marinated Samgyupsal, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Sweet, tender, and perfect for grilling. Just delicious!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Good flavor but lacked the strong bulgogi sweetness I was hoping for."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Gochujang Chicken 200g.jpg" alt="Raw Gochujang Chicken 200g">
+                        <h3>Raw Gochujang Chicken 200g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawGochujang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Gochujang Chicken 200g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 stars)</h2>
+                        <p>"Spicy and flavorful, but a bit overwhelming without side dishes."</p>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Perfect level of heat and very tender, excellent for a spicy bite."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Doenjang Chicken 200g.jpg" alt="Raw Doenjang Chicken 200g">
+                        <h3>Raw Doenjang Chicken 200g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawDoenjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Doenjang Chicken 200g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Nice and savory with a great texture, though the taste is subtle."</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 star)</h2>
+                        <p>"Fantastic, earthy doenjang flavor that shines through every bite!"</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="RawMeatPicfolder/Raw Bulgogi Chicken 200g.jpg" alt="Raw Bulgogi Chicken 200g">
+                        <h3>Raw Bulgogi Chicken 200g</h3>
+                        <p>Price: ₱169.00</p>
+                        <button class="preview-btn" data-item="rawBulgogi">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Raw Bulgogi Chicken 200g</h3>
+                        <p>Marinated boneless Chicken leg, ready to cook</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 stars)</h2>
+                        <p>"Sweet and mild, great for beginners to Korean flavors."</p>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 stars)</h2>
+                        <p>"Perfectly marinated with a delightful hint of sweetness; would order again!"</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="AlaCArte">
+        <div class="Title">
+            <h1>🥩Ala Carte</h1>
+        </div>
         <div class="menu-items">
             <div class="maincontainer">
                 <div class="thecard">
                     <div class="thefront">
                         <img src="AlaCartePicfolder/Teokbokki 500g.jpg" alt="Teokbokki 500g">
                         <h3>Teokbokki 500g</h3>
+                        <h2>🔥Popular</h2>
                         <p>Price: ₱169.00</p>
                         <br>
                         <button class="preview-btn" data-item="Teokbokki">Preview</button>
@@ -170,6 +844,7 @@
                     <div class="thefront">
                         <img src="AlaCartePicfolder/Bulgogi Samgyulsal Kimbap.jpg" alt="Bulgogi Samgyulsal Kimbap">
                         <h3>Bulgogi Samgyulsal Kimbap</h3>
+                        <h2>🔥Popular</h2>
                         <p>Price: ₱129.00</p>
                         <br>
                         <button class="preview-btn" data-item="bulgogiSamgyulsal">Preview</button>
@@ -191,13 +866,13 @@
             <div class="maincontainer">
                 <div class="thecard">
                     <div class="thefront">
-                        <img src="AlaCartePicfolder/Guchujang Chicken Kimbap.jpg" alt="Guchujang Chicken Kimbap">
-                        <h3>Guchujang Chicken Kimbap</h3>
+                        <img src="AlaCartePicfolder/Guchujang Chicken Kimbap.jpg" alt="Gochujang Chicken Kimbap">
+                        <h3>Gochujang Chicken Kimbap</h3>
                         <p>Price: ₱129.00</p>
-                        <button class="preview-btn" data-item="guchujangChicken">Preview</button>
+                        <button class="preview-btn" data-item="gochujangChicken">Preview</button>
                     </div>
                     <div class="theback">
-                        <h3>Guchujang Chicken Kimbap</h3>
+                        <h3>Gochujang Chicken Kimbap</h3>
                         <p>Kimbob with Hot pepper paste Chicken</p>
                         <br>
                         <h1>Review</h1>
@@ -258,7 +933,486 @@
                 </div>
             </div>
 
-    <script src= "menu.js"></script>
+        </div>
+    </section>
 
+    <section id="Drinks">
+        <div class="Title">
+            <h1>🥤Drinks</h1>
+        </div>
+        <div class="menu-items">
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Icetea Pouch 350ml.jpg" alt="Icetea Pouch 350ml">
+                        <h3>Icetea Pouch 350ml</h3>
+                        <p>Price: P25.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="icetea350ml">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Icetea Pouch 350ml</h3>
+                        <p>Icetea in Plastic Pouch. Blue lemonade will be replaced if not available</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"A bit too sweet, but refreshing for a quick drink."</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Nice flavor, though it could be stronger."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Icetea Pouch 500ml.jpg" alt="Icetea Pouch 500ml">
+                        <h3>Icetea Pouch 500ml</h3>
+                        <p>Price: P29.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="icetea500ml">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Icetea Pouch 500ml</h3>
+                        <p>Icetea in Plastic Pouch. Blue lemonade will be replaced if not available</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"A good size and taste, but still a little too sugary."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Tasty but didn’t feel very refreshing."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Soda and water.jpg" alt="Coke in Can 320ml">
+                        <h3>Coke in Can 320ml</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="coke320ml">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Coke in Can 320ml</h3>
+                        <p>For reference only: Coke in can 320ml, a 320ml can of Coca-Cola.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Classic taste, but not as fizzy as I expected."</p>
+                        <h2>⭐⭐⭐☆ (/5 Stars)</h2>
+                        <p>"Good, but I’ve had fresher Cokes elsewhere."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Soda and water.jpg" alt="Coke Zero in Can">
+                        <h3>Coke Zero in Can</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="cokeZero">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Coke Zero in Can</h3>
+                        <p>For reference only: Perfect for those who want to enjoy the classic Coke taste without the added sugar.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Solid option for a zero-sugar Coke; quite refreshing."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Almost tastes like the original, but the flavor's a bit flat.</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Soda and water.jpg" alt="Coke Light in Can">
+                        <h3>Coke Light in Can</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="cokeLight">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Coke Light in Can</h3>
+                        <p>For reference only: Enjoy the same great taste of Coca-Cola without the calories.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐☆☆☆☆ (1/5 Stars)</h2>
+                        <p>"Not my favorite; the flavor is a bit too mild."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Okay in a pinch, but not as satisfying as Coke Zero."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Soda and water.jpg" alt="Royal in Can">
+                        <h3>Royal in Can</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="royalCan">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Royal in Can</h3>
+                        <p>For reference only: Classic and refreshing Royal soda in a convenient can.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Great, fruity, and refreshing!"</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Decent orange flavor, but needs more fizz."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Soda and water.jpg" alt="Sprite in Can">
+                        <h3>Sprite in Can</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="spriteCan">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Sprite in Can</h3>
+                        <p>For reference only: Refresh your taste buds with the crisp and clean taste of Sprite. Served in a convenient can.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Nice and crisp, but not as bubbly as expected."</p>
+                        <h2>⭐⭐⭐☆☆ (/5 Stars)</h2>
+                        <p>"Good lemon-lime taste, very refreshing."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="DrinksPicfolder/Soda and water.jpg" alt="Mineral Water 500">
+                        <h3>Mineral Water 500</h3>
+                        <p>Price: P29.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="mineralWater">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Mineral Water 500</h3>
+                        <p>Special requests are subject to the restaurant's approval. Tell us here!</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Fresh and crisp, gets the job done."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"It’s alright, but nothing special about it."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="SideDishes">
+        <div class="Title">
+            <h1>🥗Side Dishes & Sauces</h1>
+        </div>
+        <div class="menu-items">
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Kimchi 500g.jpg" alt="Kimchi 500g">
+                        <h3>Kimchi 500g</h3>
+                        <p>Price: P179.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="kimchi500g">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Kimchi 500g</h3>
+                        <p>No.1 authentic taste in the city</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Great spice and crunch! Perfect portion for the price."</p>
+                        <h2>⭐⭐⭐☆☆ (/5 Stars)</h2>
+                        <p>"Good flavor, but could use a bit more fermentation."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Kimchi 200g.jpg" alt="Kimchi 200g">
+                        <h3>Kimchi 200g</h3>
+                        <p>Price: P89.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="kimchi200g">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Kimchi 200g</h3>
+                        <p>No.1 authentic taste in the city</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Tasty kimchi with a nice balance of spice and sourness."</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Decent, but feels overpriced for the portion size."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Cucumber Muchim 200g.jpg" alt="Cucumber Muchim 200g">
+                        <h3>Cucumber Muchim 200g</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="cucumberMuchim">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Cucumber Muchim 200g</h3>
+                        <p>Spicy cucumer salad</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Super refreshing, with a great mix of tangy and spicy!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Fresh but a bit bland, could use more seasoning."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Kulitis Muchim 100g.jpg" alt="Kulitis Muchim 100g">
+                        <h3>Kulitis Muchim 100g</h3>
+                        <p>Price: P49.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="kulitisMuchim">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Kulitis Muchim 100g</h3>
+                        <p>Boiled Kulitis mixed with korean ingrednts</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Unique flavor, really enjoyed the sesame notes!"</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Interesting texture, but not my favorite taste."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Lettuce 100g.jpg" alt="Lettuce 100g">
+                        <h3>Lettuce 100g</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="lettuce">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Lettuce 100g</h3>
+                        <p>Lettuce is usually best match for Samgyupsal in Korea.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Crisp and fresh, ideal for wraps!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Standard lettuce, but it works well with the dishes."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Gochujang Sauce 150g.jpg" alt="Gochujang Sauce 150g">
+                        <h3>Gochujang Sauce 150g</h3>
+                        <p>Price: P79.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="gochujangSauce">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Gochujang Sauce 150g</h3>
+                        <p>Hot pepper paste</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Perfect blend of heat and sweetness; a must-have!"</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Good flavor, but could be a bit spicier."
+                        </p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Doenjang sauce 150g.jpg" alt="Doenjang sauce 150g">
+                        <h3>Doenjang sauce 150g</h3>
+                        <p>Price: P79.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="doenjangSauce">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Doenjang sauce 150g</h3>
+                        <p>Soy bean paste</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Rich and flavorful, really elevates the dish."</p>
+                        <h2>⭐⭐⭐☆☆ (3/5 Stars)</h2>
+                        <p>"Decent, but a bit too salty for my taste."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Ssamjang 150g.jpg" alt="Ssamjang 150g">
+                        <h3>Ssamjang 150g</h3>
+                        <p>Price: P79.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="ssamjang">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Ssamjang 150g</h3>
+                        <p>Gochujang mixed with deonjang and some korean ingredents. Best sauce for Samgyupsal.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Great consistency and taste, pairs well with meats."</p>
+                        <h2>⭐⭐⭐☆☆ (/5 Stars)</h2>
+                        <p>"Good flavor, but a bit too mild."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Cheese Sauce 150g.jpg" alt="Cheese Sauce 150g">
+                        <h3>Cheese Sauce 150g</h3>
+                        <p>Price: P69.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="cheeseSauce">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Cheese Sauce 150g</h3>
+                        <p>Make Samgyupsal in mouth softer and richer</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐☆ (4/5 Stars)</h2>
+                        <p>"Creamy and well-balanced, perfect for dipping."</p>
+                        <h2>⭐⭐☆☆☆ (/5 Stars)</h2>
+                        <p>"A bit thin and bland for my liking."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Guchugaru 100g.jpg" alt="Guchugaru 100g">
+                        <h3>Guchugaru 100g</h3>
+                        <p>Price: P79.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="guchugaru">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Guchugaru 100g</h3>
+                        <p>Hot pepper powder. Main ingredent for Kimchi.</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"High quality and adds amazing depth to dishes!"</p>
+                        <h2>⭐⭐☆☆☆ (2/5 Stars)</h2>
+                        <p>"Fine for seasoning, but lacks aroma."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="maincontainer">
+                <div class="thecard">
+                    <div class="thefront">
+                        <img src="SideDishes&SaucesPicfolder/Extra Rice.jpg" alt="Extra Rice">
+                        <h3>Extra Rice</h3>
+                        <p>Price: P29.00</p>
+                        <br>
+                        <button class="preview-btn" data-item="extraRice">Preview</button>
+                    </div>
+                    <div class="theback">
+                        <h3>Extra Rice</h3>
+                        <p>High quality of Rice</p>
+                        <br>
+                        <h1>Review</h1>
+                        <h2>⭐⭐⭐⭐⭐ (5/5 Stars)</h2>
+                        <p>"Fluffy and fresh, exactly what I needed!"</p>
+                        <h2>⭐⭐⭐☆☆ (/5 Stars)</h2>
+                        <p>"A bit dry, but does the job."</p>
+                        <br>
+                        <button class="back-btn">Go Back</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="no-results" style="display: none;">No results found.</div>
+
+    </div>
+
+    <script src="menu.js"></script>
 </body>
 </html>
