@@ -7,6 +7,52 @@ document.addEventListener('DOMContentLoaded', () => {
         sideMenu.classList.toggle('active');
     });
 
+    const carousel = document.querySelector('.carousel-content');
+    let startX, currentX, isDragging = false;
+
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+        carousel.style.transition = 'none';
+    });
+
+    carousel.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+        const diffX = currentX - startX;
+        carousel.style.transform = `translateX(${diffX}px)`;
+    });
+
+    carousel.addEventListener('touchend', () => {
+        isDragging = false;
+        carousel.style.transition = 'transform 0.3s ease-in-out';
+        const diffX = currentX - startX;
+        if (diffX > 50) {
+            // Swipe right
+            moveCarousel(-1);
+        } else if (diffX < -50) {
+            // Swipe left
+            moveCarousel(1);
+        } else {
+            // Reset position
+            carousel.style.transform = 'translateX(0)';
+        }
+    });
+
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+
+    function moveCarousel(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+            currentIndex = items.length - 1;
+        } else if (currentIndex >= items.length) {
+            currentIndex = 0;
+        }
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+
     // Card flipping functionality
     const addCardFlipEventListeners = () => {
         const previewButtons = document.querySelectorAll('.preview-btn');

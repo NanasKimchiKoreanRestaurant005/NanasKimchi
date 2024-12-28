@@ -31,12 +31,12 @@ header {
 }
 
 header .logo img {
-    top: 10px;
+    top: 20px;
     height: 10vw;
 }
 
 /* For larger screens (desktops, tablets) */
-@media (min-width: 1024px) {
+@media (min-width: 1310px) {
     header .logo img {
         width: 10vw;  /* Make the logo smaller on larger screens */
     }
@@ -250,7 +250,7 @@ nav ul {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1310px) {
     .nav-links {
         display: none;
     }
@@ -617,6 +617,7 @@ input[type="radio"]:checked {
 .carousel {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .carousel-content {
@@ -691,5 +692,12 @@ input[type="radio"]:checked {
     .menu-categories button {
         padding: 5px 10px;
         font-size: 1rem;
+    }
+}
+
+/* Swipe animation for mobile viewports */
+@media (max-width: 768px) {
+    .carousel-content {
+        transition: transform 0.3s ease-in-out;
     }
 }
