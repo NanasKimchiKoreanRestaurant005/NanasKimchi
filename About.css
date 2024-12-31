@@ -23,8 +23,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    position: relative;
-    margin-top: 5px;
+    position: sticky; /* Change to sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it appears above other elements */
+    margin-top: 0; /* Remove margin to prevent offset when sticky */
 }
 
 header .logo img {
@@ -263,4 +265,428 @@ nav ul {
     .hamburger {
         display: flex; /* Show hamburger menu */
     }
+}
+
+/* Main Content Styling */
+#main-content {
+    margin-top: 80px; /* Adjust to the height of your header */
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+
+.map-container iframe {
+    border-radius: 10px;
+    border: 2px solid #8d0000;
+}
+
+/* Grid Layout for Larger Screens */
+@media (min-width: 1310px) {
+    #about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .about-section h1, .about-section h2 {
+        text-align: left;
+    }
+
+    .about-section p {
+        text-align: left;
+    }
+}
+
+/* Mobile-First Design */
+@media (max-width: 1310px) {
+    #about {
+        padding: 10px;
+    }
+
+    .about-section h1, .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem;
+    }
+
+    .map-container iframe {
+        height: 200px;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #a32626;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    background: #861d1d9f; /* Glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px; /* Spacing inside the container */
+    max-width: 800px; /* Centered box size */
+    margin: 50px auto; /* Center on the page */
+    text-align: center; /* Center text alignment */
+    color: #fff; /* White text color for contrast */
+}
+
+/* Logo Styling */
+.section img {
+    width: 100px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between logo and text */
+}
+
+/* Heading Styling */
+.section h2 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+.section p {
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1310px) {
+    .section {
+        padding: 15px 20px; /* Reduce padding for small screens */
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 25px;
+    }
+}
+
+/* General Flex Container */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Section 1: Glassmorphic Container */
+.section1 {
+    display: flex;
+    justify-content: space-between; /* Aligns text and image side by side */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    background: #861d1d9f; /* Glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Make it responsive */
+    max-width: 1200px;
+    color: #fff;
+}
+
+/* Text Content Styling */
+.content {
+    flex: 1 1 60%; /* Take up 60% of the container */
+    padding: 20px;
+    text-align: left;
+}
+
+.content img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+}
+
+/* Picture Styling */
+.picture1 {
+    flex: 1 1 35%; /* Take up 35% of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.picture1 img {
+    width: 100%; /* Adjust to container */
+    max-width: 300px; /* Limit size */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ffffff4d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center;
+    }
+
+    .content, .picture1 {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+
+    .picture1 img {
+        max-width: 100%; /* Remove size limit for small screens */
+    }
+}
+
+.section2 {
+    display: flex;
+    justify-content: space-between; /* Align image and text side by side */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    background: #861d1d9f; /* Glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Make it responsive */
+    max-width: 1200px;
+    color: #fff;
+}
+
+/* Picture Styling */
+.picture2 {
+    flex: 1 1 35%; /* Take up 35% of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.picture2 img {
+    width: 100%; /* Adjust to container */
+    max-width: 300px; /* Limit size */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Content Styling */
+.content {
+    flex: 1 1 60%; /* Take up 60% of the container */
+    padding: 20px;
+    text-align: left;
+}
+
+.content img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1310px) {
+    .section2 {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center;
+    }
+
+    .picture2, .content {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+
+    .picture2 img {
+        max-width: 100%; /* Remove size limit for small screens */
+    }
+}
+
+/* Glassmorphic Effect for Wide Section */
+.section4 {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    background: #861d1d9f; /* Glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    margin: 50px auto; /* Center the section on the page */
+    max-width: 100%; /* Allow full-width stretching */
+    text-align: center; /* Center-align text */
+    color: #fff; /* Ensure text contrasts with background */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Logo Styling */
+.section4 img {
+    width: 100px; /* Fixed logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+}
+
+/* Heading Styling */
+.section4 h2 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.section4 p {
+    font-family: "Dongle", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+/* Map Container */
+.map-container {
+    width: 100%; /* Stretch map to full section width */
+    margin-top: 20px;
+}
+
+/* iFrame Styling */
+.map-container iframe {
+    border: 0;
+    border-radius: 10px; /* Rounded edges for the map */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .section4 {
+        padding: 15px 20px;
+    }
+
+    .section4 h2 {
+        font-size: 22px;
+    }
+
+    .section4 p {
+        font-size: 16px;
+    }
+}
+
+/* Glassmorphic Effect for Grid Section */
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between the columns */
+    background: #861d1d9f; /* Glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 50px auto; /* Center the section */
+    max-width: 1200px; /* Limit width for a clean layout */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Grid Items */
+.grid-item {
+    background: #861d1d9f; /* Glass effect */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center; /* Center-align content in each grid */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.grid-item img:first-of-type {
+    width: 30px; /* Fixed size for the logo */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Content Images */
+.grid-item img:last-of-type {
+    width: 15%; /* Scale image to fit grid width */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Heading Styling */
+.grid-item h2 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Contrast text with background */
+}
+
+/* Paragraph Styling */
+.grid-item p {
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    color: #f0f0f0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1310px) {
+    .grid-section {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .grid-item {
+        padding: 15px;
+    }
+
+    .grid-item h2 {
+        font-size: 24px;
+    }
+
+    .grid-item p {
+        font-size: 25px;
+    }
+}
+
+.footer {
+    background-color: #a32626;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }

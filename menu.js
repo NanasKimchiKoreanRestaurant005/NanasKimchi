@@ -6,46 +6,92 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('active');
         sideMenu.classList.toggle('active');
     });
-    
 
     // Card flipping functionality
     const addCardFlipEventListeners = () => {
-        const previewButtons = document.querySelectorAll('.preview-btn');
-        const backButtons = document.querySelectorAll('.back-btn');
-
-        previewButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const card = button.closest('.maincontainer')?.querySelector('.thecard');
+        document.addEventListener('click', (event) => {
+            // Handle Preview Button click
+            if (event.target.classList.contains('preview-btn')) {
+                const card = event.target.closest('.maincontainer')?.querySelector('.thecard');
                 if (card) {
                     card.classList.add('flip');
                 } else {
-                    console.error('The card element was not found.');
+                    console.error('Card element not found for preview button.');
                 }
-            });
-        });
+            }
 
-        backButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const card = button.closest('.maincontainer')?.querySelector('.thecard');
+            // Handle Back Button click
+            if (event.target.classList.contains('back-btn')) {
+                const card = event.target.closest('.maincontainer')?.querySelector('.thecard');
                 if (card) {
                     card.classList.remove('flip');
                 } else {
-                    console.error('The card element was not found.');
+                    console.error('Card element not found for back button.');
                 }
-            });
+            }
         });
     };
 
+    // Function to generate menu items
+    const generateMenuItems = (data) => {
+        for (const category in data) {
+            const menuContainer = document.querySelector(`#${category} .menu-items`);
+            if (!menuContainer) {
+                console.error(`No menu container found for category: ${category}`);
+                continue;
+            }
+            data[category].forEach(item => {
+                const mainContainer = document.createElement('div');
+                mainContainer.classList.add('maincontainer');
+                mainContainer.setAttribute('data-item', item.name.toLowerCase());
+
+                const theCard = document.createElement('div');
+                theCard.classList.add('thecard');
+
+                const theFront = document.createElement('div');
+                theFront.classList.add('thefront');
+                const frontImg = document.createElement('img');
+                frontImg.src = item.image;
+                const frontTitle = document.createElement('h3');
+                frontTitle.textContent = item.name;
+                theFront.appendChild(frontImg);
+                theFront.appendChild(frontTitle);
+
+                const theBack = document.createElement('div');
+                theBack.classList.add('theback');
+                const backTitle = document.createElement('h3');
+                backTitle.textContent = item.name;
+                const backButton = document.createElement('button');
+                backButton.classList.add('back-btn');
+                backButton.textContent = 'Back';
+                theBack.appendChild(backTitle);
+                theBack.appendChild(backButton);
+
+                theCard.appendChild(theFront);
+                theCard.appendChild(theBack);
+                mainContainer.appendChild(theCard);
+
+                const previewButton = document.createElement('button');
+                previewButton.classList.add('preview-btn');
+                previewButton.textContent = 'Preview';
+                mainContainer.appendChild(previewButton);
+
+                menuContainer.appendChild(mainContainer);
+            });
+        }
+    };
+
+    // Generate menu items on page load
+    generateMenuItems(data);
     addCardFlipEventListeners();
 
     // Search functionality
     const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const menuItems = document.querySelectorAll('.maincontainer');
     const noResultsMessage = document.getElementById('no-results');
 
     const filterMenuItems = () => {
         const query = searchInput.value.toLowerCase();
+        const menuItems = document.querySelectorAll('.maincontainer'); // Dynamic fetching
         let hasResults = false;
 
         menuItems.forEach(item => {
@@ -70,54 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     };
 
-    // Add event listeners for search input and button
+    // Add event listener for search input
     searchInput.addEventListener('input', debounce(filterMenuItems, 300));
-    searchButton.addEventListener('click', filterMenuItems);
 });
-
-// Carousel swipe functionality for mobile viewports
-    const carousel = document.querySelector('.carousel-content');
-    let startX, currentX, isDragging = false;
-
-    carousel.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-        carousel.style.transition = 'none';
-    });
-
-    carousel.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        currentX = e.touches[0].clientX;
-        const diffX = currentX - startX;
-        carousel.style.transform = `translateX(${diffX}px)`;
-    });
-
-    carousel.addEventListener('touchend', () => {
-        isDragging = false;
-        carousel.style.transition = 'transform 0.3s ease-in-out';
-        const diffX = currentX - startX;
-        if (diffX > 50) {
-            // Swipe right
-            moveCarousel(-1);
-        } else if (diffX < -50) {
-            // Swipe left
-            moveCarousel(1);
-        } else {
-            // Reset position
-            carousel.style.transform = 'translateX(0)';
-        }
-    });
-
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel-item');
-
-    function moveCarousel(direction) {
-        currentIndex += direction;
-        if (currentIndex < 0) {
-            currentIndex = items.length - 1;
-        } else if (currentIndex >= items.length) {
-            currentIndex = 0;
-        }
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-    }

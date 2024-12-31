@@ -18,7 +18,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: auto; 
 }
 
 header {
@@ -192,14 +192,14 @@ nav ul {
 main {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 20px;
 }
 
 /* Adjust .content closer to the header */
 .content {
-    flex: 1 1 25%;
+    flex: 1 1 45%;
     max-width: 600px;
     padding: 20px;
     background: rgba(223, 19, 19, 0.31); 
@@ -215,7 +215,24 @@ main {
 .content h1, 
 .content h2, 
 .content p {
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+.content h1 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 3rem;
+}
+
+.content h2 {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 2rem;
+}
+
+.content p {
+    font-family: "Dongle", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 /* Rearrange layout for smaller screens */
@@ -242,42 +259,6 @@ main {
         max-width: 20%; /* Ensure image scales well on smaller screens */
         margin: 0 auto; /* Center the image */
     }
-}
-
-.content h1 {
-    font-family: "Do Hyeon", sans-serif;
-    font-size: 3.5rem;
-    margin-top: 30px;
-    margin-bottom: 1px;
-}
-
-.content h2 {
-    font-family: "Bagel Fat One", system-ui;
-    font-size: 2.5rem;
-}
-
-.content p {
-    font-family: "Dongle", sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.content h1 {
-    font-family: "Do Hyeon", sans-serif;
-    font-size: 4.3rem;
-    margin-bottom: 1px;
-    margin-left: 30px;
-}
-.content h2 {
-    font-family: "Bagel Fat One", system-ui;
-    font-size: 2.5rem;
-}
-
-.content p {
-    font-family: "Dongle", sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    margin-left: 30px;
 }
 
 .buttons {
@@ -314,16 +295,17 @@ main {
 }
 
 .image {
-    flex: 1 1 40%;
-    max-width: 700px;
+    flex: 1 1 45%;
+    max-width: 600px;
+    margin: 10px;
     text-align: center;
-    shape-outside: circle(50%);
 }
 
 .image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -340,4 +322,50 @@ main {
 /* Side Menu Active */
 .side-menu.active {
     left: 0;
+}
+
+@media (max-width: 1310px) {
+    /* Stack content and image for smaller screens */
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content,
+    .image {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 90%; /* Add some margin around the edges */
+        margin: 10px 0; /* Space between stacked sections */
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1310px) {
+    /* Further adjustments for very small screens */
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.6rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .image img {
+        border-radius: 10px;
+    }
 }
