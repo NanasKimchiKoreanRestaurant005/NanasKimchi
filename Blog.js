@@ -6,21 +6,32 @@ hamburger.addEventListener('click', () => {
     sideMenu.classList.toggle('open');
 });
 
-// Dropdown in side menu
-document.querySelectorAll('.side-menu > ul > li').forEach((menuItem) => {
-    const dropdown = menuItem.querySelector('.dropdown');
-    if (dropdown) {
-        menuItem.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent event bubbling
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        });
-    }
-});
+document.addEventListener("DOMContentLoaded", () => {
+    // Get the modal elements
+    const modal = document.getElementById("articleModal");
+    const iframe = document.getElementById("articleFrame");
+    const closeButton = document.querySelector(".close-btn");
 
-// Close sidebar on outside click
-document.addEventListener('click', (e) => {
-    if (!sideMenu.contains(e.target) && !hamburger.contains(e.target)) {
-        sideMenu.classList.remove('open');
-        hamburger.classList.remove('active');
-    }
+    // Add event listeners to "Read more" links
+    document.querySelectorAll(".read-more").forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent the default link behavior
+            iframe.src = link.href; // Set the iframe source to the link URL
+            modal.style.display = "block"; // Show the modal
+        });
+    });
+
+    // Close the modal when clicking the close button
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+        iframe.src = ""; // Clear the iframe source
+    });
+
+    // Close the modal when clicking outside the content
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            iframe.src = ""; // Clear the iframe source
+        }
+    });
 });

@@ -7,6 +7,7 @@
     <meta name="description" content="Welcome to Nana's Kimchi & Korean Restaurant, where we serve Authentic Korean Kimchi & Samgyupsal! The best kimchi – taste it to believe it! Enjoy our affordable Korean BBQ, Samgyupsal buffet, and family-friendly atmosphere in Roxas City, Capiz!">
     <title>Blog | Nana's Kimchi & Korean Restaurant</title>
     <link rel="icon" type="image/x-icon" href="Picfolder/NanaLogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Blog.css">
 </head>
 <body>
@@ -20,7 +21,13 @@
                 <li><a href="About.html">About</a></li>
                 <li><a href="Cuisine.html">Cuisine</a></li>
                 <li><a href="Feedback.html">Contact Us</a></li>
-                <li><a href="Blog.html" class="active">Blog</a></li>
+                <li>
+                    <a href="Blog.html" class="active">Blog <span class="fas fa-chevron-down"></span></a>
+                    <ul class="dropdown">
+                        <li><a href="#Lastest">Our Latest Articles</a></li>
+                        <li><a href="#Articles">Other Articles</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
@@ -41,12 +48,19 @@
                 <li><a href="About.html">About</a></li>
                 <li><a href="Cuisine.html">Cuisine</a></li>
                 <li><a href="Feedback.html">Contact Us</a></li>
-                <li><a href="Blog.html" class="active">Blog</a></li>
+                <li>
+                    <a href="Blog.html" class="active">Blog <span class="fas fa-chevron-down"></span></a>
+                    <ul class="dropdown">
+                        <li><a href="#Lastest">Our Latest Articles</a></li>
+                        <li><a href="#Articles">Other Articles</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </header>
 
     <main>
+    <section id="Lastest">
         <section class="blog-section">
             <h1>Latest Stories</h1>
             <div class="blog-container">
@@ -90,8 +104,8 @@
                     <img src="Picfolder/A Foodie’s Guide to Korean Restaurants in Capiz.webp" alt="Korean Cuisine">
                     <div class="blog-content">
                         <h2>A Foodie’s Guide to Korean Restaurants in Capiz</h2>
-                        <p> Korean cuisine has taken the world by storm, and the Philippines is no exception. Capiz, a province often celebrated for its seafood, is now home to a growing numbe...</p>
-                        <a href="https://mariaisabellafrancisco.blogspot.com/2024/12/a-foodies-guide-to-korean-restaurants.html" class="read-more">Read more</a>
+                        <p>Korean cuisine has taken the world by storm, and the Philippines is no exception. Capiz, a province often celebrated for its seafood, is now home to a growing numbe...</p>
+                        <a href="/blog/korean-restaurants-in-capiz" class="read-more">Read more</a>
                     </div>
                 </div>
 
@@ -161,7 +175,16 @@
                 </div>
             </div>
         </section>
+    </section>
     </main>
+
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="articleFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    
 
     <footer>
         <p>&copy; 2024 Nana's Kimchi & Korean Restaurant. All rights reserved.</p>

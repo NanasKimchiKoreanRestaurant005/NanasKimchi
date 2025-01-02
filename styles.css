@@ -32,20 +32,20 @@ header {
 
 header .logo img {
     top: 20px;
-    height: 10vw;
+    height: 15vw;
 }
 
 /* For larger screens (desktops, tablets) */
 @media (min-width: 1310px) {
     header .logo img {
-        width: 10vw;  /* Make the logo smaller on larger screens */
+        width: 15vw;  /* Make the logo smaller on larger screens */
     }
 }
 
 /* For smaller screens (mobiles) */
 @media (max-width: 600px) {
     header .logo img {
-        width: 10vw;  /* Increase logo size on smaller screens */
+        width: 15vw;  /* Increase logo size on smaller screens */
     }
 }
 
@@ -94,58 +94,51 @@ nav ul {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    position: relative;
-    z-index: 1100;
-    padding: 20px;
-    background: rgba(223, 19, 19, 0.31); 
+    padding: 15px;
+    background: rgba(223, 19, 19, 0.31);
     border-radius: 30px;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(90, 17, 17, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .hamburger span {
-    width: 25px;
+    width: 19px;
     height: 3px;
     background: #fff;
     border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Active State: Hamburger to X */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg); /* Top bar becomes diagonal */
+    transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0; /* Middle bar disappears */
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Bottom bar becomes diagonal */
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Side Menu */
 .side-menu {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 1.7rem;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden */
+    left: -250px;
     width: 250px;
     height: 100%;
-    background: rgba(168, 18, 18, 0.31); 
-    border-radius: 0px 10px ;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(90, 17, 17, 0.2);
+    background: rgba(168, 18, 18, 0.31);
+    border-radius: 0px 10px;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     padding: 20px;
     transition: left 0.3s ease-in-out;
-    z-index: 1000;
+}
+
+.side-menu.active {
+    left: 0;
 }
 
 .side-menu ul {
@@ -155,36 +148,77 @@ nav ul {
 
 .side-menu ul li {
     margin-bottom: 20px;
+    position: relative; /* Needed for dropdown positioning */
 }
 
-.side-menu ul li a {
+.side-menu li a {
     text-decoration: none;
-    color: #fff;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.side-menu ul li a:hover {
-    color: #8d0000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .side-menu li a.active,
 .side-menu li a:hover {
     background: #ffc107;
     color: #8d0000;
+}
+
+.side-menu .logo img {
+    width: 110%;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px; /* Optional: Add a rounded style */
+}
+
+/* Dropdown Menu */
+.side-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(223, 19, 19, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    list-style: none;
+}
+
+.side-menu .dropdown li {
+    margin: 5px 0;
+}
+
+.side-menu .dropdown li a {
+    text-decoration: none;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1rem;
+    color: #fff;
     padding: 5px 10px;
+    display: block;
     border-radius: 5px;
 }
 
+.side-menu .dropdown li a:hover {
+    background: #ffc107;
+    color: #8d0000;
+}
+
+.side-menu ul li:hover .dropdown {
+    display: block;
+}
 
 /* Responsive Design */
 @media (max-width: 1310px) {
     .nav-links {
-        display: none; /* Hide navigation links */
+        display: none;
     }
 
     .hamburger {
-        display: flex; /* Show hamburger menu */
+        display: flex;
     }
 }
 
@@ -305,7 +339,6 @@ main {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */

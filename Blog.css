@@ -33,20 +33,20 @@
 
     header .logo img {
         top: 10px;
-        height: 10vw;
+        height: 15vw;
     }
 
     /* For larger screens (desktops, tablets) */
     @media (min-width: 1024px) {
         header .logo img {
-            width: 10vw;  /* Make the logo smaller on larger screens */
+            width: 15vw;  /* Make the logo smaller on larger screens */
         }
     }
 
     /* For smaller screens (mobiles) */
     @media (max-width: 600px) {
         header .logo img {
-            width: 10vw;  /* Increase logo size on smaller screens */
+            width: 15vw;  /* Increase logo size on smaller screens */
         }
     }
 
@@ -95,36 +95,46 @@
         display: none;
         position: absolute;
         top: 100%;
-        left: 0;
+        left: -150px;
         background-color: rgba(223, 19, 19, 0.85);
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        padding: 10px;
+        padding: 10px 20px;
         z-index: 1000;
         list-style: none;
+        min-width: 200px;
     }
-
+    
     .nav-links .dropdown li {
         margin: 5px 0;
     }
-
+    
     .nav-links .dropdown li a {
         text-decoration: none;
         font-family: "Do Hyeon", sans-serif;
         font-size: 1rem;
         color: #fff;
-        padding: 5px 10px;
+        padding: 10px 15px;
         display: block;
         border-radius: 5px;
+        white-space: nowrap;
     }
-
+    
     .nav-links .dropdown li a:hover {
         background: #ffc107;
         color: #8d0000;
     }
-
+    
     .nav-links li:hover .dropdown {
         display: block;
+    }
+
+    .nav-links .arrow {
+        font-size: 0.1rem;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+        vertical-align: middle;
     }
 
     /* Hamburger Menu */
@@ -353,6 +363,54 @@
         background-color: #ffc107;
         color: #8d0000;
     }
+
+    /* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+iframe {
+    bottom: 1000px;
+    width: 100%;
+    height: 80vh;
+    border: none;
+    border-radius: 30px;
+}
+
 
     footer {
         text-align: center;

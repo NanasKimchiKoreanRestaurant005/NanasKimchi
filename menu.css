@@ -32,20 +32,21 @@ header {
 
 header .logo img {
     top: 20px;
-    height: 10vw;
+    height: 15vw;
+    width: auto;
 }
 
 /* For larger screens (desktops, tablets) */
 @media (min-width: 1310px) {
     header .logo img {
-        width: 10vw;  /* Make the logo smaller on larger screens */
+        width: 15vw;  /* Make the logo smaller on larger screens */
     }
 }
 
 /* For smaller screens (mobiles) */
 @media (max-width: 600px) {
     header .logo img {
-        width: 20vw;  /* Increase logo size on smaller screens */
+        width: 15vw;  /* Increase logo size on smaller screens */
     }
 }
 
@@ -89,6 +90,14 @@ nav ul {
     color: #8d0000;
 }
 
+.nav-links .arrow {
+    font-size: 0.1rem;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Dropdown Menu */
 .nav-links .dropdown {
     display: none;
@@ -98,9 +107,10 @@ nav ul {
     background-color: rgba(223, 19, 19, 0.85);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 10px 20px;
     z-index: 1000;
     list-style: none;
+    min-width: 200px;
 }
 
 .nav-links .dropdown li {
@@ -112,9 +122,10 @@ nav ul {
     font-family: "Do Hyeon", sans-serif;
     font-size: 1rem;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 15px;
     display: block;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 .nav-links .dropdown li a:hover {
@@ -132,14 +143,14 @@ nav ul {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    padding: 20px;
+    padding: 15px;
     background: rgba(223, 19, 19, 0.31);
     border-radius: 30px;
     backdrop-filter: blur(10px);
 }
 
 .hamburger span {
-    width: 25px;
+    width: 19px;
     height: 3px;
     background: #fff;
     border-radius: 3px;
@@ -269,7 +280,7 @@ nav ul {
 
 .Title h1 {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 3.5rem;
+    font-size: 2rem;
     padding-left: 50px;
     padding-bottom: 30px;
     background: rgba(244, 180, 76, 0.50); 
@@ -334,20 +345,21 @@ nav ul {
 .thefront h3 {
     text-align: center;
     font-family: "Do Hyeon", sans-serif;
-    font-size: 30px;
+    font-size: 1.5rem; /* Use viewport width for responsiveness */
 }
 
 .thefront h2 {
     text-align: center;
     font-family: "Do Hyeon", sans-serif;
-    font-size: 20px;
+    font-size: 1rem; /* Use viewport width for responsiveness */
 }
 
 .thefront p {
     font-family: "Dongle", sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem; /* Use viewport width for responsiveness */
 }
 
+/* Back Section */
 .theback {
     background: #fafafa;
     color: #333;
@@ -357,24 +369,25 @@ nav ul {
 .theback h1 {
     word-spacing: 2px;
     text-align: center;
-    font-size: 15px;
+    font-size: 1.5rem; /* Use viewport width for responsiveness */
 }
 
 .theback h2 {
     word-spacing: 2px;
-    font-size: 15px;
+    font-size: 1.3rem /* Use viewport width for responsiveness */
 }
 
 .theback h3 {
     word-spacing: 2px;
     text-align: center;
-    font-size: 25px;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 2rem; /* Use viewport width for responsiveness */
 }
 
 .theback p {
     text-align: center;
     word-spacing: 2px;
-    font-size: 15px;
+    font-size: 1.2rem; /* Use viewport width for responsiveness */
 }
 
 .preview-btn {
@@ -428,7 +441,7 @@ nav ul {
     font-weight: bold;
     text-decoration: none;
     font-family: "Do Hyeon", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: #ffc107;
     padding: 5px 10px;
     border-radius: 10px;
@@ -464,8 +477,8 @@ nav ul {
     }
 
     .thefront img, .theback img {
-        width: 50%;
-        height: 50%;
+        width: 90%;
+        height: 90%;
     }
 
     .preview-btn, .back-btn {
@@ -481,21 +494,13 @@ nav ul {
     }
 
     .thefront img, .theback img {
-        width: 40%;
-        height: 40%;
+        width: 90%;
+        height: 90%;
     }
 
     .preview-btn, .back-btn {
         padding: 10px 30px;
         font-size: 16px;
-    }
-
-    .search-container input {
-        width: 80%;
-    }
-
-    .search-container button {
-        padding: 10px;
     }
 
     .menu-categories button {
@@ -504,9 +509,26 @@ nav ul {
     }
 }
 
-/* Swipe animation for mobile viewports */
 @media (max-width: 768px) {
-    .carousel-content {
-        transition: transform 0.3s ease-in-out;
+    .thefront h3,
+    .thefront h2,
+    .thefront p,
+    .theback h1,
+    .theback h2,
+    .theback h3,
+    .theback p {
+        font-size: 16px; /* Adjust font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .thefront h3,
+    .thefront h2,
+    .thefront p,
+    .theback h1,
+    .theback h2,
+    .theback h3,
+    .theback p {
+        font-size: 14px; /* Further reduce font size for very small screens */
     }
 }

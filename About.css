@@ -30,21 +30,21 @@ header {
 }
 
 header .logo img {
-    top: 10px;
-    height: 10vw;
+    top: 15px;
+    height: 15vw;
 }
 
 /* For larger screens (desktops, tablets) */
 @media (min-width: 1024px) {
     header .logo img {
-        width: 10vw;  /* Make the logo smaller on larger screens */
+        width: 15vw;  /* Make the logo smaller on larger screens */
     }
 }
 
 /* For smaller screens (mobiles) */
 @media (max-width: 600px) {
     header .logo img {
-        width: 10vw;  /* Increase logo size on smaller screens */
+        width: 15vw;  /* Increase logo size on smaller screens */
     }
 }
 
@@ -97,13 +97,14 @@ nav ul {
     background-color: rgba(223, 19, 19, 0.85);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    padding: 10px 20px;
     z-index: 1000;
     list-style: none;
+    min-width: 200px;
 }
 
 .nav-links .dropdown li {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .nav-links .dropdown li a {
@@ -111,9 +112,10 @@ nav ul {
     font-family: "Do Hyeon", sans-serif;
     font-size: 1rem;
     color: #fff;
-    padding: 5px 10px;
+    padding:10px 15px;
     display: block;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 .nav-links .dropdown li a:hover {
@@ -125,68 +127,90 @@ nav ul {
     display: block;
 }
 
+.nav-links .arrow {
+    font-size: 0.1rem;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    position: relative;
-    z-index: 1100;
-    padding: 20px;
-    background: rgba(223, 19, 19, 0.31); 
+    padding: 15px;
+    background: rgba(223, 19, 19, 0.31);
     border-radius: 30px;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(90, 17, 17, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .hamburger span {
-    width: 25px;
+    width: 19px;
     height: 3px;
     background: #fff;
     border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Active State: Hamburger to X */
 .hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg); /* Top bar becomes diagonal */
+    transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0; /* Middle bar disappears */
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Bottom bar becomes diagonal */
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Side Menu */
 .side-menu {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 1.7rem;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden */
+    left: -250px;
     width: 250px;
     height: 100%;
-    background: rgba(168, 18, 18, 0.31); 
-    border-radius: 0px 10px ;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(90, 17, 17, 0.2);
+    background: rgba(168, 18, 18, 0.31);
+    border-radius: 0px 10px;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     padding: 20px;
     transition: left 0.3s ease-in-out;
-    z-index: 1000;
 }
 
-.side-menu.open {
-    left: 0; /* Show the side menu */
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 20px;
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.side-menu li a {
+    text-decoration: none;
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.side-menu li a.active,
+.side-menu li a:hover {
+    background: #ffc107;
+    color: #8d0000;
 }
 
 .side-menu .logo img {
@@ -197,35 +221,17 @@ nav ul {
     border-radius: 10px; /* Optional: Add a rounded style */
 }
 
-.side-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.side-menu ul li {
-    position: relative; /* Needed for dropdown positioning */
-    margin-bottom: 20px;
-}
-
-.side-menu ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.side-menu ul li a:hover {
-    color: #ffc107;
-}
-
-/* Dropdown Menu in Sidebar */
+/* Dropdown Menu */
 .side-menu .dropdown {
     display: none;
-    position: relative;
-    left: 10px;
-    background-color: rgba(168, 18, 18, 0.85);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(223, 19, 19, 0.85);
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
+    z-index: 1000;
     list-style: none;
 }
 
@@ -234,22 +240,18 @@ nav ul {
 }
 
 .side-menu .dropdown li a {
-    color: #fff;
+    text-decoration: none;
+    font-family: "Do Hyeon", sans-serif;
     font-size: 1rem;
+    color: #fff;
     padding: 5px 10px;
+    display: block;
     border-radius: 5px;
 }
 
-.side-menu ul li a:hover {
-    color: #8d0000;
-}
-
-.side-menu li a.active,
-.side-menu li a:hover {
+.side-menu .dropdown li a:hover {
     background: #ffc107;
     color: #8d0000;
-    padding: 5px 10px;
-    border-radius: 5px;
 }
 
 .side-menu ul li:hover .dropdown {
@@ -257,13 +259,13 @@ nav ul {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1310px) {
     .nav-links {
-        display: none; /* Hide navigation links */
+        display: none;
     }
 
     .hamburger {
-        display: flex; /* Show hamburger menu */
+        display: flex;
     }
 }
 
@@ -576,9 +578,9 @@ nav ul {
 /* Paragraph Styling */
 .section4 p {
     font-family: "Dongle", sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1;
-    margin: 5px 0;
+    margin: 0;
 }
 
 /* Map Container */
