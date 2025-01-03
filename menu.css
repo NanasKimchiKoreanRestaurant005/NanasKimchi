@@ -532,3 +532,11 @@ nav ul {
         font-size: 14px; /* Further reduce font size for very small screens */
     }
 }
+
+.footer {
+    background-color: #a32626;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
