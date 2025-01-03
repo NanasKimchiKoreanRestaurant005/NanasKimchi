@@ -514,12 +514,18 @@ nav ul {
 
 @media (max-width: 768px) {
     .thefront h3,
-    .thefront h2,
-    .thefront p,
-    .theback h1,
+    .theback h3, 
+    .theback h1 {
+        font-size: 20px; /* Adjust font size for small screens */
+        font-family: "Do Hyeon", sans-serif;
+    }
+}
+
+@media (max-width: 768px) {
     .theback h2,
-    .theback h3,
-    .theback p {
+    .theback p,
+    .thefront h2,
+    .thefront p {
         font-size: 16px; /* Adjust font size for small screens */
         font-family: "Dongle", sans-serif;
     }
@@ -527,13 +533,19 @@ nav ul {
 
 @media (max-width: 480px) {
     .thefront h3,
-    .thefront h2,
-    .thefront p,
-    .theback h1,
-    .theback h2,
     .theback h3,
-    .theback p {
-        font-size: 14px; /* Further reduce font size for very small screens */
+    .theback h1 {
+        font-size: 18px; /* Adjust font size for small screens */
+        font-family: "Do Hyeon", sans-serif;
+    }
+}
+
+@media (max-width: 480px) {
+    .theback h2,
+    .theback p,
+    .thefront h2,
+    .thefront p {
+        font-size: 14px; /* Adjust font size for small screens */
         font-family: "Dongle", sans-serif;
     }
 }
