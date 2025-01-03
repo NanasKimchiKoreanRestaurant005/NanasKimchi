@@ -521,6 +521,7 @@ nav ul {
     .theback h3,
     .theback p {
         font-size: 16px; /* Adjust font size for small screens */
+        font-family: "Dongle", sans-serif;
     }
 }
 
@@ -533,6 +534,7 @@ nav ul {
     .theback h3,
     .theback p {
         font-size: 14px; /* Further reduce font size for very small screens */
+        font-family: "Dongle", sans-serif;
     }
 }
 
