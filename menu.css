@@ -367,26 +367,29 @@ nav ul {
 }
 
 .theback h1 {
-    word-spacing: 2px;
+    font-family: "Dongle", sans-serif;
+    word-spacing: 0.9px;
     text-align: center;
     font-size: 1.5rem; /* Use viewport width for responsiveness */
 }
 
 .theback h2 {
-    word-spacing: 2px;
+    font-family: "Dongle", sans-serif;
+    word-spacing: 0.9px;
     font-size: 1.3rem /* Use viewport width for responsiveness */
 }
 
 .theback h3 {
-    word-spacing: 2px;
+    word-spacing: 0.9px;
     text-align: center;
     font-family: "Do Hyeon", sans-serif;
     font-size: 2rem; /* Use viewport width for responsiveness */
 }
 
 .theback p {
+    font-family: "Dongle", sans-serif;
     text-align: center;
-    word-spacing: 2px;
+    word-spacing: 0.9px;
     font-size: 1.2rem; /* Use viewport width for responsiveness */
 }
 
