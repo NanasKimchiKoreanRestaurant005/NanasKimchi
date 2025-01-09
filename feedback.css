@@ -307,8 +307,9 @@ nav ul {
 
 .Title h1 {
     font-family: "Do Hyeon", sans-serif;
-    font-size: 2rem;
-    width: 500px; /* Set width to desired size */
+    font-size: 1.5rem; /* Smaller font size for better scaling */
+    width: 90%; /* Adjust width to a percentage for responsiveness */
+    max-width: 500px; /* Optional: set a max-width for larger screens */
     margin: 0 auto; /* Centers the element horizontally */
     text-align: center; /* Centers the text inside the element */
     background: rgba(244, 180, 76, 0.50); 
@@ -319,6 +320,21 @@ nav ul {
     border: 1px solid rgba(90, 17, 17, 0.2);
     padding: 20px;
     border-radius: 25px;
+}
+
+/* Add media query for smaller devices */
+@media (max-width: 768px) {
+    .Title h1 {
+        font-size: 1.2rem; /* Reduce font size further on smaller screens */
+        padding: 15px; /* Adjust padding for a compact look */
+    }
+}
+
+@media (max-width: 480px) {
+    .Title h1 {
+        font-size: 1rem; /* Even smaller font size for very small screens */
+        padding: 10px; /* Compact padding for better fit */
+    }
 }
 
 .feedback-cards {
