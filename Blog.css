@@ -27,17 +27,16 @@
         top: 0; /* Stick to the top of the viewport */
         z-index: 1000; /* Ensure it appears above other elements */
         margin-top: 0; /* Remove margin to prevent offset when sticky */
-        display: flex;
-        margin-top: 5px;
+
     }
 
     header .logo img {
-        top: 10px;
+        top: 20px;
         height: 15vw;
     }
 
     /* For larger screens (desktops, tablets) */
-    @media (min-width: 1024px) {
+    @media (min-width: 1310px) {
         header .logo img {
             width: 15vw;  /* Make the logo smaller on larger screens */
         }
@@ -146,7 +145,7 @@
         cursor: pointer;
         gap: 5px;
         z-index: 1100;
-        padding: 20px;
+        padding: 15px;
         background: rgba(223, 19, 19, 0.31); 
         border-radius: 30px;
         backdrop-filter: blur(10px); 
@@ -156,7 +155,7 @@
     }
 
     .hamburger span {
-        width: 25px;
+        width: 19px;
         height: 3px;
         background: #fff;
         border-radius: 3px;
@@ -271,7 +270,7 @@
     }
 
     /* Responsive Design */
-    @media (max-width: 768px) {
+    @media (max-width: 1310px) {
         .nav-links {
             display: none; /* Hide navigation links */
         }
@@ -290,6 +289,7 @@
         -webkit-backdrop-filter: blur(10px); 
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
         border: 1px solid rgba(90, 17, 17, 0.2);
+        position: relative; /* Default stacking context */
     }
 
     .blog-section h1 {
@@ -417,4 +417,5 @@ iframe {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    font-family: "Do Hyeon", sans-serif;
 }
